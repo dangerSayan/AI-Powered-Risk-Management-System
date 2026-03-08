@@ -1,0 +1,612 @@
+[
+  {
+    "id": "1ccc5bcb",
+    "name": "Project Atlas",
+    "code": "PRJ-001",
+    "client": "Tata Consultancy Services",
+    "project_type": "Cloud Migration",
+    "description": "Large-scale AWS cloud migration for a legacy core banking system with 200+ microservices. Involves lift-and-shift of on-premise infrastructure to AWS with zero downtime requirement.",
+    "start_date": "2025-09-09",
+    "planned_end_date": "2026-09-04",
+    "current_progress_percent": 45.0,
+    "schedule_delay_days": 25,
+    "team": [
+      {
+        "id": "7323f914",
+        "name": "Pooja Nair",
+        "role": "DevOps Engineer",
+        "seniority": "Senior",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "45f6f29b",
+        "name": "Rahul Rao",
+        "role": "Frontend Developer",
+        "seniority": "Senior",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "c815db3b",
+        "name": "Meera Reddy",
+        "role": "Backend Developer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.11
+      },
+      {
+        "id": "9a628980",
+        "name": "Sneha Gupta",
+        "role": "Solution Architect",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.11
+      },
+      {
+        "id": "cce24355",
+        "name": "Pooja Pillai",
+        "role": "Scrum Master",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.27
+      },
+      {
+        "id": "6b59104d",
+        "name": "Meera Nair",
+        "role": "Backend Developer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.4
+      },
+      {
+        "id": "68d969fa",
+        "name": "Pooja Reddy",
+        "role": "QA Engineer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.21
+      },
+      {
+        "id": "2e6a78e7",
+        "name": "Suresh Iyer",
+        "role": "Frontend Developer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.14
+      },
+      {
+        "id": "74c52c98",
+        "name": "Ananya Shah",
+        "role": "QA Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.34
+      },
+      {
+        "id": "cb983d5c",
+        "name": "Pooja Joshi",
+        "role": "Scrum Master",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.15
+      },
+      {
+        "id": "c12e82e9",
+        "name": "Priya Gupta",
+        "role": "Data Engineer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.43
+      },
+      {
+        "id": "3b05f9c7",
+        "name": "Meera Kumar",
+        "role": "Frontend Developer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.12
+      }
+    ],
+    "team_size_planned": 12,
+    "resignations_last_30_days": 2,
+    "financials": {
+      "total_budget": 4500000.0,
+      "spent_to_date": 2421048.8,
+      "projected_total": 5248359.33,
+      "last_payment_date": "2025-12-08",
+      "payment_delay_days": 60,
+      "payment_amount_pending": 538085.03,
+      "burn_rate_monthly": 436081.67
+    },
+    "tech_stack": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "CloudWatch"
+    ],
+    "external_dependencies": [
+      "AWS",
+      "SAP"
+    ],
+    "status": "DELAYED",
+    "client_satisfaction_score": 6.5,
+    "last_client_communication_days": 12,
+    "created_at": "2026-03-08T15:31:46.797941",
+    "updated_at": "2026-03-08T15:31:46.797941"
+  },
+  {
+    "id": "3fa03aff",
+    "name": "Project Helix",
+    "code": "PRJ-002",
+    "client": "Tech Mahindra",
+    "project_type": "AI/ML",
+    "description": "AI-driven predictive analytics platform for supply chain optimization. Uses ML models to forecast demand, detect anomalies, and recommend inventory adjustments in real time.",
+    "start_date": "2025-12-08",
+    "planned_end_date": "2026-08-05",
+    "current_progress_percent": 65.0,
+    "schedule_delay_days": 0,
+    "team": [
+      {
+        "id": "ff9cec82",
+        "name": "Aditya Shah",
+        "role": "QA Engineer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.17
+      },
+      {
+        "id": "1111900b",
+        "name": "Sneha Pillai",
+        "role": "Data Engineer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.38
+      },
+      {
+        "id": "a057a91d",
+        "name": "Meera Pillai",
+        "role": "Full Stack Developer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.31
+      },
+      {
+        "id": "7564d4a5",
+        "name": "Rahul Joshi",
+        "role": "Business Analyst",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.21
+      },
+      {
+        "id": "4ea7e710",
+        "name": "Aditya Iyer",
+        "role": "Backend Developer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.19
+      },
+      {
+        "id": "b7451384",
+        "name": "Suresh Iyer",
+        "role": "Business Analyst",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.21
+      },
+      {
+        "id": "7b792be6",
+        "name": "Nikhil Mehta",
+        "role": "QA Engineer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.19
+      },
+      {
+        "id": "66f84560",
+        "name": "Karthik Chatterjee",
+        "role": "Tech Lead",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.16
+      }
+    ],
+    "team_size_planned": 8,
+    "resignations_last_30_days": 0,
+    "financials": {
+      "total_budget": 2800000.0,
+      "spent_to_date": 1707436.53,
+      "projected_total": 2841158.15,
+      "last_payment_date": "2026-01-27",
+      "payment_delay_days": 10,
+      "payment_amount_pending": 579578.57,
+      "burn_rate_monthly": 230340.65
+    },
+    "tech_stack": [
+      "Python",
+      "TensorFlow",
+      "MLflow",
+      "FastAPI",
+      "PostgreSQL",
+      "Pandas"
+    ],
+    "external_dependencies": [
+      "SAP",
+      "Stripe"
+    ],
+    "status": "ON_TRACK",
+    "client_satisfaction_score": 8.8,
+    "last_client_communication_days": 3,
+    "created_at": "2026-03-08T15:31:46.797941",
+    "updated_at": "2026-03-08T15:31:46.797941"
+  },
+  {
+    "id": "55f0d4e7",
+    "name": "Project Nova",
+    "code": "PRJ-003",
+    "client": "Cognizant India",
+    "project_type": "Web Development",
+    "description": "Enterprise customer self-service portal with real-time analytics dashboards, ticket management, and integration with Salesforce CRM and SAP billing systems.",
+    "start_date": "2025-11-08",
+    "planned_end_date": "2026-09-04",
+    "current_progress_percent": 30.0,
+    "schedule_delay_days": 40,
+    "team": [
+      {
+        "id": "fc8918ae",
+        "name": "Sneha Singh",
+        "role": "Scrum Master",
+        "seniority": "Lead",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "af449ae1",
+        "name": "Priya Verma",
+        "role": "Backend Developer",
+        "seniority": "Lead",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "f8a95a08",
+        "name": "Rahul Pillai",
+        "role": "Full Stack Developer",
+        "seniority": "Senior",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "2829f662",
+        "name": "Meera Patel",
+        "role": "Business Analyst",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.25
+      },
+      {
+        "id": "8c4d33db",
+        "name": "Rohit Nair",
+        "role": "Scrum Master",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.44
+      },
+      {
+        "id": "4bf0567a",
+        "name": "Aditya Rao",
+        "role": "Frontend Developer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.37
+      },
+      {
+        "id": "e15b7e60",
+        "name": "Suresh Pillai",
+        "role": "QA Engineer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.14
+      },
+      {
+        "id": "1e9a11cd",
+        "name": "Rahul Joshi",
+        "role": "Backend Developer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.48
+      },
+      {
+        "id": "ac00db2f",
+        "name": "Rohit Verma",
+        "role": "Full Stack Developer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.3
+      },
+      {
+        "id": "2cc096ca",
+        "name": "Kavitha Pillai",
+        "role": "Data Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.44
+      }
+    ],
+    "team_size_planned": 10,
+    "resignations_last_30_days": 3,
+    "financials": {
+      "total_budget": 1800000.0,
+      "spent_to_date": 675827.59,
+      "projected_total": 2073286.4,
+      "last_payment_date": "2025-12-23",
+      "payment_delay_days": 45,
+      "payment_amount_pending": 193434.0,
+      "burn_rate_monthly": 156580.89
+    },
+    "tech_stack": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "AWS S3"
+    ],
+    "external_dependencies": [
+      "Razorpay",
+      "Stripe"
+    ],
+    "status": "CRITICAL",
+    "client_satisfaction_score": 5.5,
+    "last_client_communication_days": 18,
+    "created_at": "2026-03-08T15:31:46.797941",
+    "updated_at": "2026-03-08T15:31:46.797941"
+  },
+  {
+    "id": "1b7b6e46",
+    "name": "Project Orion",
+    "code": "PRJ-004",
+    "client": "Infosys Ltd",
+    "project_type": "Data Engineering",
+    "description": "End-to-end data lake implementation with real-time streaming pipelines using Apache Kafka and Spark. Includes historical data migration and BI dashboard setup.",
+    "start_date": "2025-07-11",
+    "planned_end_date": "2026-04-07",
+    "current_progress_percent": 88.0,
+    "schedule_delay_days": 0,
+    "team": [
+      {
+        "id": "67694ca6",
+        "name": "Divya Sharma",
+        "role": "Frontend Developer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.47
+      },
+      {
+        "id": "a1c0871a",
+        "name": "Sneha Sharma",
+        "role": "DevOps Engineer",
+        "seniority": "Senior",
+        "is_active": true,
+        "resignation_risk": 0.45
+      },
+      {
+        "id": "4cc22a20",
+        "name": "Priya Rao",
+        "role": "Tech Lead",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.43
+      },
+      {
+        "id": "970a5d62",
+        "name": "Rahul Pillai",
+        "role": "Tech Lead",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.48
+      },
+      {
+        "id": "30dbd9da",
+        "name": "Vikram Gupta",
+        "role": "Solution Architect",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.27
+      },
+      {
+        "id": "238cb462",
+        "name": "Nikhil Gupta",
+        "role": "DevOps Engineer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.39
+      },
+      {
+        "id": "0bd997af",
+        "name": "Aditya Pillai",
+        "role": "QA Engineer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.28
+      },
+      {
+        "id": "bda2e85e",
+        "name": "Priya Kumar",
+        "role": "DevOps Engineer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.13
+      },
+      {
+        "id": "1395ccd1",
+        "name": "Meera Gupta",
+        "role": "DevOps Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.34
+      }
+    ],
+    "team_size_planned": 9,
+    "resignations_last_30_days": 0,
+    "financials": {
+      "total_budget": 3200000.0,
+      "spent_to_date": 2593352.42,
+      "projected_total": 3239905.46,
+      "last_payment_date": "2026-02-01",
+      "payment_delay_days": 5,
+      "payment_amount_pending": 292665.78,
+      "burn_rate_monthly": 312637.54
+    },
+    "tech_stack": [
+      "Python",
+      "Apache Spark",
+      "Kafka",
+      "Airflow",
+      "Snowflake",
+      "dbt"
+    ],
+    "external_dependencies": [
+      "AWS",
+      "Salesforce"
+    ],
+    "status": "ON_TRACK",
+    "client_satisfaction_score": 9.1,
+    "last_client_communication_days": 2,
+    "created_at": "2026-03-08T15:31:46.797941",
+    "updated_at": "2026-03-08T15:31:46.797941"
+  },
+  {
+    "id": "7272a6c3",
+    "name": "Project Zenith",
+    "code": "PRJ-005",
+    "client": "Tata Consultancy Services",
+    "project_type": "Mobile App",
+    "description": "Cross-platform mobile banking app for retail customers with biometric authentication, UPI integration, and real-time transaction alerts. iOS and Android delivery.",
+    "start_date": "2025-10-09",
+    "planned_end_date": "2026-12-03",
+    "current_progress_percent": 20.0,
+    "schedule_delay_days": 55,
+    "team": [
+      {
+        "id": "986e2a26",
+        "name": "Vikram Pillai",
+        "role": "Tech Lead",
+        "seniority": "Senior",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "15a29d73",
+        "name": "Rohit Singh",
+        "role": "Solution Architect",
+        "seniority": "Senior",
+        "is_active": false,
+        "resignation_risk": 1.0
+      },
+      {
+        "id": "d5e41d36",
+        "name": "Sneha Verma",
+        "role": "Tech Lead",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.42
+      },
+      {
+        "id": "f807d3b9",
+        "name": "Priya Patel",
+        "role": "Business Analyst",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.24
+      },
+      {
+        "id": "74cda1f0",
+        "name": "Divya Shah",
+        "role": "Backend Developer",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.37
+      },
+      {
+        "id": "17021f3b",
+        "name": "Arjun Reddy",
+        "role": "QA Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.42
+      },
+      {
+        "id": "5c2e2da6",
+        "name": "Sneha Kumar",
+        "role": "DevOps Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.31
+      },
+      {
+        "id": "4493addb",
+        "name": "Karthik Singh",
+        "role": "Data Engineer",
+        "seniority": "Mid",
+        "is_active": true,
+        "resignation_risk": 0.29
+      },
+      {
+        "id": "0760265e",
+        "name": "Divya Verma",
+        "role": "Scrum Master",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.14
+      },
+      {
+        "id": "bfd54016",
+        "name": "Priya Chatterjee",
+        "role": "DevOps Engineer",
+        "seniority": "Junior",
+        "is_active": true,
+        "resignation_risk": 0.17
+      },
+      {
+        "id": "b1839238",
+        "name": "Divya Kumar",
+        "role": "Business Analyst",
+        "seniority": "Lead",
+        "is_active": true,
+        "resignation_risk": 0.46
+      }
+    ],
+    "team_size_planned": 11,
+    "resignations_last_30_days": 2,
+    "financials": {
+      "total_budget": 2200000.0,
+      "spent_to_date": 520488.07,
+      "projected_total": 2464758.69,
+      "last_payment_date": "2025-11-23",
+      "payment_delay_days": 75,
+      "payment_amount_pending": 522517.76,
+      "burn_rate_monthly": 190283.65
+    },
+    "tech_stack": [
+      "Flutter",
+      "Firebase",
+      "Kotlin",
+      "Swift",
+      "REST APIs",
+      "AWS Cognito"
+    ],
+    "external_dependencies": [
+      "Razorpay",
+      "SAP"
+    ],
+    "status": "CRITICAL",
+    "client_satisfaction_score": 5.0,
+    "last_client_communication_days": 22,
+    "created_at": "2026-03-08T15:31:46.797941",
+    "updated_at": "2026-03-08T15:31:46.797941"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "signal_type": "economic_indicator",
+    "source": "Reserve Bank of India",
+    "headline": "RBI holds repo rate at 6.5% amid global uncertainty",
+    "summary": "RBI maintains rates but signals caution. IT spending budgets at large corporates expected to face scrutiny in H2.",
+    "sentiment": "negative",
+    "relevance_score": 0.75,
+    "impact_on_it": "Client budget freezes likely. IT project approvals and renewals may slow down in banking sector."
+  },
+  {
+    "signal_type": "industry_trend",
+    "source": "NASSCOM Quarterly Report",
+    "headline": "Indian IT sector revenue growth slows to 6.5% YoY from 11.2%",
+    "summary": "Discretionary IT spending cut by major BFSI and retail clients. Cloud migration projects being deferred to next fiscal year.",
+    "sentiment": "negative",
+    "relevance_score": 0.9,
+    "impact_on_it": "Project delays and budget cuts expected in cloud and digital transformation segments."
+  },
+  {
+    "signal_type": "news",
+    "source": "Economic Times Technology",
+    "headline": "Mid-level tech talent attrition rises to 18.3% in Q2",
+    "summary": "Competition from GCCs and product startups pushing mid-senior developer attrition to 18-month highs.",
+    "sentiment": "negative",
+    "relevance_score": 0.85,
+    "impact_on_it": "Resource risk increases across all active projects. Replacement hiring taking 6-8 weeks on average."
+  },
+  {
+    "signal_type": "economic_indicator",
+    "source": "Bloomberg India Desk",
+    "headline": "USD/INR stabilizes at 83.5 \u2014 rupee shows resilience",
+    "summary": "Rupee stabilization reduces forex risk for IT exporters. Offshore delivery model remains cost-competitive.",
+    "sentiment": "positive",
+    "relevance_score": 0.6,
+    "impact_on_it": "Positive for offshore delivery margins. Cost competitiveness with global peers maintained."
+  },
+  {
+    "signal_type": "industry_trend",
+    "source": "Gartner IT Spending Forecast 2024",
+    "headline": "AI/ML project investments surge 34% globally in 2024",
+    "summary": "Despite slowdown in traditional IT, GenAI and ML projects are accelerating with strong client willingness to invest.",
+    "sentiment": "positive",
+    "relevance_score": 0.8,
+    "impact_on_it": "AI/ML projects are well-funded and protected from budget cuts. Strong tailwind for teams with ML capabilities."
+  },
+  {
+    "signal_type": "news",
+    "source": "Moneycontrol Markets",
+    "headline": "BFSI sector IT budgets cut 15-20% after Q2 NPA spike",
+    "summary": "Banking clients reducing discretionary IT spends significantly. Core banking upgrades continue but new initiatives on hold.",
+    "sentiment": "negative",
+    "relevance_score": 0.88,
+    "impact_on_it": "Payment delays and scope reductions in banking IT projects. Cloud migration timelines likely to slip by 1-2 quarters."
+  }
+]

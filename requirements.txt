@@ -1,0 +1,34 @@
+# ============================================================
+# RiskPulse AI — Python Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+
+# ── AI & LLM ────────────────────────────────────────────────
+langchain
+langchain-community
+langchain-huggingface
+chromadb
+sentence-transformers
+huggingface-hub
+transformers
+
+# ── Data Validation ─────────────────────────────────────────
+pydantic
+
+# ── Frontend ────────────────────────────────────────────────
+streamlit
+plotly
+
+# ── Data Processing ─────────────────────────────────────────
+pandas
+numpy
+faker
+
+# ── Utilities ───────────────────────────────────────────────
+python-dotenv
+loguru
+rich
+requests
+httpx
+python-dateutil
+apscheduler
