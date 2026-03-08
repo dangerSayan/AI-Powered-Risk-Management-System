@@ -466,6 +466,14 @@ class RiskScoringAgent:
                 f"planned resources active"
             )
 
+        if project.key_person_dependency:
+            score += 20
+            evidence.append("Key person dependency — critical knowledge concentrated in one resource (+20 pts)")
+
+        if project.contractor_count >= 3:
+            score += 10
+            evidence.append(f"{project.contractor_count} contractors on team — knowledge retention risk (+10 pts)")
+
         return min(100.0, score), evidence
 
     def _score_technical(
@@ -487,9 +495,13 @@ class RiskScoringAgent:
 
         # Rule 1: High-complexity project types
         complex_types = [
-            "Cloud Migration",
-            "AI/ML",
-            "ERP Implementation"
+            "Cloud Migration & Modernization",
+            "AI/ML Platform Development",
+            "Enterprise ERP Implementation",
+            "Digital Transformation Program",
+            "Cybersecurity & SOC Implementation",
+            "Fintech Payment Gateway",
+            "Healthcare Information System",
         ]
         if project.project_type.value in complex_types:
             score += 20
@@ -564,36 +576,31 @@ class RiskScoringAgent:
 
         return min(100.0, score), evidence
 
-    def _score_compliance(
-        self,
-        project: Project
-    ) -> Tuple[float, List[str]]:
-        """
-        Scores compliance risk based on:
-        - Payment delay breaching SLA thresholds
-        - Schedule delay potentially triggering penalty clauses
-        """
-        # Baseline: every contract has some compliance exposure
+    def _score_compliance(self, project: Project) -> Tuple[float, List[str]]:
         score = 15.0
         evidence = ["Baseline contractual compliance risk (15 pts)"]
 
-        # Rule 1: Prolonged payment delay may breach SLA
         if project.financials.payment_delay_days > 60:
             score += 20
-            evidence.append(
-                f"Payment delay of {project.financials.payment_delay_days} "
-                f"days may breach contractual SLA thresholds (+20 pts)"
-            )
+            evidence.append(f"Payment delay of {project.financials.payment_delay_days} days may breach SLA (+20 pts)")
 
-        # Rule 2: Major schedule overrun may trigger penalty clauses
         if project.schedule_delay_days > 45:
             score += 15
-            evidence.append(
-                f"Schedule overrun of {project.schedule_delay_days} days "
-                f"may trigger contract penalty clauses (+15 pts)"
-            )
+            evidence.append(f"Schedule overrun of {project.schedule_delay_days} days may trigger penalties (+15 pts)")
+
+        # NEW — use the richer fields
+        if project.sla_breaches_count > 0:
+            breach_points = min(30, project.sla_breaches_count * 10)
+            score += breach_points
+            evidence.append(f"{project.sla_breaches_count} SLA breach(es) recorded (+{breach_points} pts)")
+
+        if project.key_person_dependency:
+            score += 10
+            evidence.append("Key person dependency identified — single point of failure risk (+10 pts)")
 
         return min(100.0, score), evidence
+
+
 
     # ============================================================
     # SECTION B — SCORE AGGREGATION

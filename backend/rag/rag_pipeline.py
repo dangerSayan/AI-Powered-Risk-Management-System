@@ -285,7 +285,7 @@ class RiskRAGPipeline:
         parts.append(
             f"\nPORTFOLIO SUMMARY:\n"
             f"Portfolio Risk Score: {analysis.portfolio_risk_score:.0f}/100\n"
-            f"HIGH/CRITICAL Projects: {analysis.high_risk_count}/5\n"
+            f"HIGH/CRITICAL Projects: {analysis.high_risk_count}/{analysis.total_projects_analyzed}\n"
             f"Most Critical: {analysis.most_critical_project}\n"
         )
 
@@ -353,7 +353,7 @@ class RiskRAGPipeline:
             "tell all", "detail", "full detail", "complete detail",
             "all in detail", "describe all", "explain all"
         ]):
-            lines = ["**Complete Portfolio Report — All 5 Projects**\n"]
+            lines = [f"**Complete Portfolio Report — All {len(reports)} Projects**\n"]
             lines.append("=" * 50 + "\n")
             for r in sorted_reports:
                 icon = ("🔴" if r.risk_level.value == "CRITICAL" else

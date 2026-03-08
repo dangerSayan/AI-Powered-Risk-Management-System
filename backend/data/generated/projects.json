@@ -1,612 +1,1060 @@
 [
   {
-    "id": "1ccc5bcb",
+    "id": "PRJ-001",
     "name": "Project Atlas",
-    "code": "PRJ-001",
-    "client": "Tata Consultancy Services",
-    "project_type": "Cloud Migration",
-    "description": "Large-scale AWS cloud migration for a legacy core banking system with 200+ microservices. Involves lift-and-shift of on-premise infrastructure to AWS with zero downtime requirement.",
-    "start_date": "2025-09-09",
+    "type": "Enterprise ERP Implementation",
+    "client": "Tata Steel Ltd",
+    "client_industry": "Manufacturing",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Full SAP S/4HANA implementation across 12 plant locations covering finance, supply chain, and HR modules. Phase 2 of a 3-phase digital transformation roadmap.",
+    "technology_stack": [
+      "SAP S/4HANA",
+      "SAP BTP",
+      "Azure",
+      "Python",
+      "Power BI"
+    ],
+    "infrastructure": "Hybrid Cloud (Azure + On-premise SAP)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Pune + Client Site)",
+    "budget_inr": 4200000,
+    "amount_spent_inr": 2890000,
+    "projected_overrun_inr": 748359,
+    "pending_invoices_inr": 538085,
+    "payment_overdue_days": 60,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-03-01",
     "planned_end_date": "2026-09-04",
-    "current_progress_percent": 45.0,
-    "schedule_delay_days": 25,
-    "team": [
-      {
-        "id": "7323f914",
-        "name": "Pooja Nair",
-        "role": "DevOps Engineer",
-        "seniority": "Senior",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "45f6f29b",
-        "name": "Rahul Rao",
-        "role": "Frontend Developer",
-        "seniority": "Senior",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "c815db3b",
-        "name": "Meera Reddy",
-        "role": "Backend Developer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.11
-      },
-      {
-        "id": "9a628980",
-        "name": "Sneha Gupta",
-        "role": "Solution Architect",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.11
-      },
-      {
-        "id": "cce24355",
-        "name": "Pooja Pillai",
-        "role": "Scrum Master",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.27
-      },
-      {
-        "id": "6b59104d",
-        "name": "Meera Nair",
-        "role": "Backend Developer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.4
-      },
-      {
-        "id": "68d969fa",
-        "name": "Pooja Reddy",
-        "role": "QA Engineer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.21
-      },
-      {
-        "id": "2e6a78e7",
-        "name": "Suresh Iyer",
-        "role": "Frontend Developer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.14
-      },
-      {
-        "id": "74c52c98",
-        "name": "Ananya Shah",
-        "role": "QA Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.34
-      },
-      {
-        "id": "cb983d5c",
-        "name": "Pooja Joshi",
-        "role": "Scrum Master",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.15
-      },
-      {
-        "id": "c12e82e9",
-        "name": "Priya Gupta",
-        "role": "Data Engineer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.43
-      },
-      {
-        "id": "3b05f9c7",
-        "name": "Meera Kumar",
-        "role": "Frontend Developer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.12
-      }
-    ],
-    "team_size_planned": 12,
+    "actual_completion_pct": 45,
+    "planned_completion_pct": 58,
+    "days_behind_schedule": 25,
+    "total_sprints": 24,
+    "completed_sprints": 11,
+    "delayed_sprints": 4,
+    "team_size": 18,
+    "onsite_count": 4,
+    "offshore_count": 14,
     "resignations_last_30_days": 2,
-    "financials": {
-      "total_budget": 4500000.0,
-      "spent_to_date": 2421048.8,
-      "projected_total": 5248359.33,
-      "last_payment_date": "2025-12-08",
-      "payment_delay_days": 60,
-      "payment_amount_pending": 538085.03,
-      "burn_rate_monthly": 436081.67
-    },
-    "tech_stack": [
-      "AWS",
-      "Terraform",
-      "Docker",
-      "Kubernetes",
-      "Jenkins",
-      "CloudWatch"
-    ],
-    "external_dependencies": [
-      "AWS",
-      "SAP"
-    ],
-    "status": "DELAYED",
+    "open_vacancies": 1,
+    "avg_experience_years": 5.2,
+    "team_utilization_pct": 88,
+    "contractor_count": 3,
+    "key_person_dependency": true,
     "client_satisfaction_score": 6.5,
-    "last_client_communication_days": 12,
-    "created_at": "2026-03-08T15:31:46.797941",
-    "updated_at": "2026-03-08T15:31:46.797941"
+    "client_escalations_count": 1,
+    "days_since_last_client_contact": 8,
+    "nps_score": 32,
+    "change_requests_pending": 3,
+    "sla_breaches_count": 1,
+    "risk_tags": [
+      "payment_delay",
+      "resource_attrition",
+      "scope_creep",
+      "schedule_delay",
+      "key_person_dependency"
+    ],
+    "compliance_flags": [
+      "DPDP Act compliance pending",
+      "ISO 27001 renewal due"
+    ],
+    "vendor_dependencies": [
+      "SAP License renewal due Q3 2026",
+      "Azure contract expiry Jul 2026"
+    ],
+    "previous_risk_scores": [
+      38,
+      42,
+      47,
+      51,
+      53
+    ],
+    "risk_trend": "INCREASING"
   },
   {
-    "id": "3fa03aff",
+    "id": "PRJ-002",
     "name": "Project Helix",
-    "code": "PRJ-002",
-    "client": "Tech Mahindra",
-    "project_type": "AI/ML",
-    "description": "AI-driven predictive analytics platform for supply chain optimization. Uses ML models to forecast demand, detect anomalies, and recommend inventory adjustments in real time.",
-    "start_date": "2025-12-08",
-    "planned_end_date": "2026-08-05",
-    "current_progress_percent": 65.0,
-    "schedule_delay_days": 0,
-    "team": [
-      {
-        "id": "ff9cec82",
-        "name": "Aditya Shah",
-        "role": "QA Engineer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.17
-      },
-      {
-        "id": "1111900b",
-        "name": "Sneha Pillai",
-        "role": "Data Engineer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.38
-      },
-      {
-        "id": "a057a91d",
-        "name": "Meera Pillai",
-        "role": "Full Stack Developer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.31
-      },
-      {
-        "id": "7564d4a5",
-        "name": "Rahul Joshi",
-        "role": "Business Analyst",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.21
-      },
-      {
-        "id": "4ea7e710",
-        "name": "Aditya Iyer",
-        "role": "Backend Developer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.19
-      },
-      {
-        "id": "b7451384",
-        "name": "Suresh Iyer",
-        "role": "Business Analyst",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.21
-      },
-      {
-        "id": "7b792be6",
-        "name": "Nikhil Mehta",
-        "role": "QA Engineer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.19
-      },
-      {
-        "id": "66f84560",
-        "name": "Karthik Chatterjee",
-        "role": "Tech Lead",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.16
-      }
+    "type": "Cloud Migration & Modernization",
+    "client": "HDFC Bank",
+    "client_industry": "Banking & Financial Services",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Migration of legacy on-premise banking applications to AWS cloud. Includes re-architecting 14 microservices, data lake setup, and DevSecOps pipeline implementation.",
+    "technology_stack": [
+      "AWS",
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "Python",
+      "PostgreSQL"
     ],
-    "team_size_planned": 8,
+    "infrastructure": "AWS Cloud (Multi-AZ)",
+    "delivery_model": "Time & Material",
+    "team_location": "Offshore (Bengaluru)",
+    "budget_inr": 3800000,
+    "amount_spent_inr": 2470000,
+    "projected_overrun_inr": 41158,
+    "pending_invoices_inr": 85000,
+    "payment_overdue_days": 12,
+    "billing_frequency": "Bi-weekly",
+    "start_date": "2025-06-01",
+    "planned_end_date": "2026-08-05",
+    "actual_completion_pct": 65,
+    "planned_completion_pct": 66,
+    "days_behind_schedule": 0,
+    "total_sprints": 20,
+    "completed_sprints": 13,
+    "delayed_sprints": 1,
+    "team_size": 14,
+    "onsite_count": 2,
+    "offshore_count": 12,
     "resignations_last_30_days": 0,
-    "financials": {
-      "total_budget": 2800000.0,
-      "spent_to_date": 1707436.53,
-      "projected_total": 2841158.15,
-      "last_payment_date": "2026-01-27",
-      "payment_delay_days": 10,
-      "payment_amount_pending": 579578.57,
-      "burn_rate_monthly": 230340.65
-    },
-    "tech_stack": [
+    "open_vacancies": 0,
+    "avg_experience_years": 6.8,
+    "team_utilization_pct": 82,
+    "contractor_count": 2,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.6,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 3,
+    "nps_score": 68,
+    "change_requests_pending": 1,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "market_risk",
+      "technical_complexity"
+    ],
+    "compliance_flags": [
+      "RBI Cloud Guidelines compliance",
+      "PCI DSS audit due Q4 2026"
+    ],
+    "vendor_dependencies": [
+      "AWS Enterprise support contract renewal"
+    ],
+    "previous_risk_scores": [
+      22,
+      20,
+      18,
+      20,
+      19
+    ],
+    "risk_trend": "STABLE"
+  },
+  {
+    "id": "PRJ-003",
+    "name": "Project Nova",
+    "type": "AI/ML Platform Development",
+    "client": "Bajaj Finserv",
+    "client_industry": "Financial Services",
+    "client_location": "Pune, Maharashtra",
+    "description": "Building an end-to-end AI/ML platform for credit risk scoring, fraud detection, and customer churn prediction. Includes MLOps pipeline, model registry, and real-time inference API.",
+    "technology_stack": [
       "Python",
       "TensorFlow",
       "MLflow",
       "FastAPI",
-      "PostgreSQL",
-      "Pandas"
+      "Azure ML",
+      "Spark",
+      "Kafka"
     ],
-    "external_dependencies": [
-      "SAP",
-      "Stripe"
+    "infrastructure": "Azure Cloud (AI-optimized)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Hyderabad + Remote)",
+    "budget_inr": 5600000,
+    "amount_spent_inr": 1680000,
+    "projected_overrun_inr": 273286,
+    "pending_invoices_inr": 193434,
+    "payment_overdue_days": 45,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-09-01",
+    "planned_end_date": "2026-09-04",
+    "actual_completion_pct": 30,
+    "planned_completion_pct": 48,
+    "days_behind_schedule": 40,
+    "total_sprints": 26,
+    "completed_sprints": 7,
+    "delayed_sprints": 6,
+    "team_size": 16,
+    "onsite_count": 3,
+    "offshore_count": 13,
+    "resignations_last_30_days": 3,
+    "open_vacancies": 3,
+    "avg_experience_years": 4.1,
+    "team_utilization_pct": 95,
+    "contractor_count": 0,
+    "key_person_dependency": true,
+    "client_satisfaction_score": 5.5,
+    "client_escalations_count": 2,
+    "days_since_last_client_contact": 18,
+    "nps_score": 12,
+    "change_requests_pending": 5,
+    "sla_breaches_count": 3,
+    "risk_tags": [
+      "resource_attrition",
+      "schedule_delay",
+      "client_dissatisfaction",
+      "technical_complexity",
+      "payment_delay",
+      "key_person_dependency"
     ],
-    "status": "ON_TRACK",
-    "client_satisfaction_score": 8.8,
-    "last_client_communication_days": 3,
-    "created_at": "2026-03-08T15:31:46.797941",
-    "updated_at": "2026-03-08T15:31:46.797941"
+    "compliance_flags": [
+      "RBI AI/ML model explainability guidelines",
+      "DPDP Act data handling compliance"
+    ],
+    "vendor_dependencies": [
+      "Azure GPU quota approval pending",
+      "Kafka Enterprise license negotiation"
+    ],
+    "previous_risk_scores": [
+      35,
+      44,
+      52,
+      57,
+      60
+    ],
+    "risk_trend": "RAPIDLY_INCREASING"
   },
   {
-    "id": "55f0d4e7",
-    "name": "Project Nova",
-    "code": "PRJ-003",
-    "client": "Cognizant India",
-    "project_type": "Web Development",
-    "description": "Enterprise customer self-service portal with real-time analytics dashboards, ticket management, and integration with Salesforce CRM and SAP billing systems.",
-    "start_date": "2025-11-08",
-    "planned_end_date": "2026-09-04",
-    "current_progress_percent": 30.0,
-    "schedule_delay_days": 40,
-    "team": [
-      {
-        "id": "fc8918ae",
-        "name": "Sneha Singh",
-        "role": "Scrum Master",
-        "seniority": "Lead",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "af449ae1",
-        "name": "Priya Verma",
-        "role": "Backend Developer",
-        "seniority": "Lead",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "f8a95a08",
-        "name": "Rahul Pillai",
-        "role": "Full Stack Developer",
-        "seniority": "Senior",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "2829f662",
-        "name": "Meera Patel",
-        "role": "Business Analyst",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.25
-      },
-      {
-        "id": "8c4d33db",
-        "name": "Rohit Nair",
-        "role": "Scrum Master",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.44
-      },
-      {
-        "id": "4bf0567a",
-        "name": "Aditya Rao",
-        "role": "Frontend Developer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.37
-      },
-      {
-        "id": "e15b7e60",
-        "name": "Suresh Pillai",
-        "role": "QA Engineer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.14
-      },
-      {
-        "id": "1e9a11cd",
-        "name": "Rahul Joshi",
-        "role": "Backend Developer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.48
-      },
-      {
-        "id": "ac00db2f",
-        "name": "Rohit Verma",
-        "role": "Full Stack Developer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.3
-      },
-      {
-        "id": "2cc096ca",
-        "name": "Kavitha Pillai",
-        "role": "Data Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.44
-      }
-    ],
-    "team_size_planned": 10,
-    "resignations_last_30_days": 3,
-    "financials": {
-      "total_budget": 1800000.0,
-      "spent_to_date": 675827.59,
-      "projected_total": 2073286.4,
-      "last_payment_date": "2025-12-23",
-      "payment_delay_days": 45,
-      "payment_amount_pending": 193434.0,
-      "burn_rate_monthly": 156580.89
-    },
-    "tech_stack": [
-      "React",
+    "id": "PRJ-004",
+    "name": "Project Orion",
+    "type": "Mobile Banking Application",
+    "client": "Kotak Mahindra Bank",
+    "client_industry": "Banking & Financial Services",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Next-gen mobile banking app for retail and corporate banking customers. UPI 2.0 integration, biometric authentication, AI-powered spend analytics, and multi-currency support for 8M+ users.",
+    "technology_stack": [
+      "Flutter",
       "Node.js",
       "PostgreSQL",
       "Redis",
-      "Docker",
-      "AWS S3"
-    ],
-    "external_dependencies": [
-      "Razorpay",
-      "Stripe"
-    ],
-    "status": "CRITICAL",
-    "client_satisfaction_score": 5.5,
-    "last_client_communication_days": 18,
-    "created_at": "2026-03-08T15:31:46.797941",
-    "updated_at": "2026-03-08T15:31:46.797941"
-  },
-  {
-    "id": "1b7b6e46",
-    "name": "Project Orion",
-    "code": "PRJ-004",
-    "client": "Infosys Ltd",
-    "project_type": "Data Engineering",
-    "description": "End-to-end data lake implementation with real-time streaming pipelines using Apache Kafka and Spark. Includes historical data migration and BI dashboard setup.",
-    "start_date": "2025-07-11",
-    "planned_end_date": "2026-04-07",
-    "current_progress_percent": 88.0,
-    "schedule_delay_days": 0,
-    "team": [
-      {
-        "id": "67694ca6",
-        "name": "Divya Sharma",
-        "role": "Frontend Developer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.47
-      },
-      {
-        "id": "a1c0871a",
-        "name": "Sneha Sharma",
-        "role": "DevOps Engineer",
-        "seniority": "Senior",
-        "is_active": true,
-        "resignation_risk": 0.45
-      },
-      {
-        "id": "4cc22a20",
-        "name": "Priya Rao",
-        "role": "Tech Lead",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.43
-      },
-      {
-        "id": "970a5d62",
-        "name": "Rahul Pillai",
-        "role": "Tech Lead",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.48
-      },
-      {
-        "id": "30dbd9da",
-        "name": "Vikram Gupta",
-        "role": "Solution Architect",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.27
-      },
-      {
-        "id": "238cb462",
-        "name": "Nikhil Gupta",
-        "role": "DevOps Engineer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.39
-      },
-      {
-        "id": "0bd997af",
-        "name": "Aditya Pillai",
-        "role": "QA Engineer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.28
-      },
-      {
-        "id": "bda2e85e",
-        "name": "Priya Kumar",
-        "role": "DevOps Engineer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.13
-      },
-      {
-        "id": "1395ccd1",
-        "name": "Meera Gupta",
-        "role": "DevOps Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.34
-      }
-    ],
-    "team_size_planned": 9,
-    "resignations_last_30_days": 0,
-    "financials": {
-      "total_budget": 3200000.0,
-      "spent_to_date": 2593352.42,
-      "projected_total": 3239905.46,
-      "last_payment_date": "2026-02-01",
-      "payment_delay_days": 5,
-      "payment_amount_pending": 292665.78,
-      "burn_rate_monthly": 312637.54
-    },
-    "tech_stack": [
-      "Python",
-      "Apache Spark",
-      "Kafka",
-      "Airflow",
-      "Snowflake",
-      "dbt"
-    ],
-    "external_dependencies": [
       "AWS",
-      "Salesforce"
+      "Firebase"
     ],
-    "status": "ON_TRACK",
-    "client_satisfaction_score": 9.1,
-    "last_client_communication_days": 2,
-    "created_at": "2026-03-08T15:31:46.797941",
-    "updated_at": "2026-03-08T15:31:46.797941"
+    "infrastructure": "AWS (Mumbai Region)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Offshore (Chennai)",
+    "budget_inr": 2800000,
+    "amount_spent_inr": 2464000,
+    "projected_overrun_inr": 39905,
+    "pending_invoices_inr": 292666,
+    "payment_overdue_days": 22,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-01-15",
+    "planned_end_date": "2026-04-07",
+    "actual_completion_pct": 88,
+    "planned_completion_pct": 90,
+    "days_behind_schedule": 5,
+    "total_sprints": 18,
+    "completed_sprints": 16,
+    "delayed_sprints": 1,
+    "team_size": 11,
+    "onsite_count": 2,
+    "offshore_count": 9,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 0,
+    "avg_experience_years": 5.9,
+    "team_utilization_pct": 78,
+    "contractor_count": 1,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 9.0,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 2,
+    "nps_score": 74,
+    "change_requests_pending": 1,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "near_completion",
+      "minor_delay"
+    ],
+    "compliance_flags": [
+      "RBI Mobile Banking Guidelines v2",
+      "PCI DSS Level 1 audit"
+    ],
+    "vendor_dependencies": [
+      "Apple App Store review",
+      "Google Play Store certification"
+    ],
+    "previous_risk_scores": [
+      28,
+      22,
+      18,
+      16,
+      16
+    ],
+    "risk_trend": "STABLE_LOW"
   },
   {
-    "id": "7272a6c3",
+    "id": "PRJ-005",
     "name": "Project Zenith",
-    "code": "PRJ-005",
-    "client": "Tata Consultancy Services",
-    "project_type": "Mobile App",
-    "description": "Cross-platform mobile banking app for retail customers with biometric authentication, UPI integration, and real-time transaction alerts. iOS and Android delivery.",
-    "start_date": "2025-10-09",
+    "type": "Digital Transformation Program",
+    "client": "Reliance Retail",
+    "client_industry": "Retail & E-commerce",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "End-to-end digital transformation of retail operations including omnichannel commerce platform, inventory management AI, customer data platform (CDP), and loyalty program modernization across 2,500+ stores.",
+    "technology_stack": [
+      "Salesforce",
+      "MuleSoft",
+      "React",
+      "Python",
+      "GCP",
+      "BigQuery",
+      "Vertex AI"
+    ],
+    "infrastructure": "GCP (Multi-region India)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Bengaluru + Mumbai)",
+    "budget_inr": 8500000,
+    "amount_spent_inr": 1700000,
+    "projected_overrun_inr": 264759,
+    "pending_invoices_inr": 522518,
+    "payment_overdue_days": 75,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-11-01",
     "planned_end_date": "2026-12-03",
-    "current_progress_percent": 20.0,
-    "schedule_delay_days": 55,
-    "team": [
-      {
-        "id": "986e2a26",
-        "name": "Vikram Pillai",
-        "role": "Tech Lead",
-        "seniority": "Senior",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "15a29d73",
-        "name": "Rohit Singh",
-        "role": "Solution Architect",
-        "seniority": "Senior",
-        "is_active": false,
-        "resignation_risk": 1.0
-      },
-      {
-        "id": "d5e41d36",
-        "name": "Sneha Verma",
-        "role": "Tech Lead",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.42
-      },
-      {
-        "id": "f807d3b9",
-        "name": "Priya Patel",
-        "role": "Business Analyst",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.24
-      },
-      {
-        "id": "74cda1f0",
-        "name": "Divya Shah",
-        "role": "Backend Developer",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.37
-      },
-      {
-        "id": "17021f3b",
-        "name": "Arjun Reddy",
-        "role": "QA Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.42
-      },
-      {
-        "id": "5c2e2da6",
-        "name": "Sneha Kumar",
-        "role": "DevOps Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.31
-      },
-      {
-        "id": "4493addb",
-        "name": "Karthik Singh",
-        "role": "Data Engineer",
-        "seniority": "Mid",
-        "is_active": true,
-        "resignation_risk": 0.29
-      },
-      {
-        "id": "0760265e",
-        "name": "Divya Verma",
-        "role": "Scrum Master",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.14
-      },
-      {
-        "id": "bfd54016",
-        "name": "Priya Chatterjee",
-        "role": "DevOps Engineer",
-        "seniority": "Junior",
-        "is_active": true,
-        "resignation_risk": 0.17
-      },
-      {
-        "id": "b1839238",
-        "name": "Divya Kumar",
-        "role": "Business Analyst",
-        "seniority": "Lead",
-        "is_active": true,
-        "resignation_risk": 0.46
-      }
-    ],
-    "team_size_planned": 11,
+    "actual_completion_pct": 20,
+    "planned_completion_pct": 32,
+    "days_behind_schedule": 55,
+    "total_sprints": 30,
+    "completed_sprints": 5,
+    "delayed_sprints": 5,
+    "team_size": 24,
+    "onsite_count": 6,
+    "offshore_count": 18,
     "resignations_last_30_days": 2,
-    "financials": {
-      "total_budget": 2200000.0,
-      "spent_to_date": 520488.07,
-      "projected_total": 2464758.69,
-      "last_payment_date": "2025-11-23",
-      "payment_delay_days": 75,
-      "payment_amount_pending": 522517.76,
-      "burn_rate_monthly": 190283.65
-    },
-    "tech_stack": [
-      "Flutter",
-      "Firebase",
-      "Kotlin",
-      "Swift",
-      "REST APIs",
-      "AWS Cognito"
-    ],
-    "external_dependencies": [
-      "Razorpay",
-      "SAP"
-    ],
-    "status": "CRITICAL",
+    "open_vacancies": 2,
+    "avg_experience_years": 4.8,
+    "team_utilization_pct": 92,
+    "contractor_count": 4,
+    "key_person_dependency": true,
     "client_satisfaction_score": 5.0,
-    "last_client_communication_days": 22,
-    "created_at": "2026-03-08T15:31:46.797941",
-    "updated_at": "2026-03-08T15:31:46.797941"
+    "client_escalations_count": 3,
+    "days_since_last_client_contact": 12,
+    "nps_score": 8,
+    "change_requests_pending": 7,
+    "sla_breaches_count": 4,
+    "risk_tags": [
+      "payment_delay",
+      "schedule_delay",
+      "resource_attrition",
+      "client_dissatisfaction",
+      "scope_creep",
+      "key_person_dependency",
+      "multiple_escalations"
+    ],
+    "compliance_flags": [
+      "DPDP Act customer data compliance",
+      "GST integration audit pending"
+    ],
+    "vendor_dependencies": [
+      "Salesforce license negotiation in progress",
+      "MuleSoft Anypoint Platform quota approval",
+      "GCP committed use discount pending"
+    ],
+    "previous_risk_scores": [
+      40,
+      48,
+      55,
+      59,
+      61
+    ],
+    "risk_trend": "RAPIDLY_INCREASING"
+  },
+  {
+    "id": "PRJ-006",
+    "name": "Project Titan",
+    "type": "Data Warehouse & Analytics Platform",
+    "client": "Wipro Technologies (Internal)",
+    "client_industry": "IT Services",
+    "client_location": "Bengaluru, Karnataka",
+    "description": "Enterprise data warehouse on Snowflake with real-time ETL pipelines from 18 source systems. Self-service BI dashboards for C-suite and operational reporting covering 6,000+ business users.",
+    "technology_stack": [
+      "Snowflake",
+      "dbt",
+      "Airflow",
+      "Power BI",
+      "Python",
+      "Azure Data Factory"
+    ],
+    "infrastructure": "Azure + Snowflake Cloud",
+    "delivery_model": "Time & Material",
+    "team_location": "Offshore (Bengaluru)",
+    "budget_inr": 3200000,
+    "amount_spent_inr": 1920000,
+    "projected_overrun_inr": 180000,
+    "pending_invoices_inr": 145000,
+    "payment_overdue_days": 28,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-05-01",
+    "planned_end_date": "2026-11-30",
+    "actual_completion_pct": 52,
+    "planned_completion_pct": 58,
+    "days_behind_schedule": 18,
+    "total_sprints": 22,
+    "completed_sprints": 11,
+    "delayed_sprints": 2,
+    "team_size": 13,
+    "onsite_count": 1,
+    "offshore_count": 12,
+    "resignations_last_30_days": 1,
+    "open_vacancies": 1,
+    "avg_experience_years": 5.5,
+    "team_utilization_pct": 85,
+    "contractor_count": 2,
+    "key_person_dependency": true,
+    "client_satisfaction_score": 7.2,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 5,
+    "nps_score": 45,
+    "change_requests_pending": 2,
+    "sla_breaches_count": 1,
+    "risk_tags": [
+      "schedule_delay",
+      "resource_attrition",
+      "key_person_dependency"
+    ],
+    "compliance_flags": [
+      "ISO 27001 data security review",
+      "GDPR data residency check"
+    ],
+    "vendor_dependencies": [
+      "Snowflake credits consumption monitoring",
+      "Power BI Premium license renewal"
+    ],
+    "previous_risk_scores": [
+      30,
+      35,
+      38,
+      40,
+      43
+    ],
+    "risk_trend": "SLOWLY_INCREASING"
+  },
+  {
+    "id": "PRJ-007",
+    "name": "Project Apex",
+    "type": "Cybersecurity & SOC Implementation",
+    "client": "Yes Bank",
+    "client_industry": "Banking & Financial Services",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Setting up Security Operations Center (SOC), implementing SIEM solution, endpoint detection & response (EDR), and zero-trust network architecture across 45 branch locations and 3,200 endpoints.",
+    "technology_stack": [
+      "Splunk",
+      "CrowdStrike",
+      "Palo Alto",
+      "Azure Sentinel",
+      "Python",
+      "SOAR"
+    ],
+    "infrastructure": "Hybrid (On-premise SOC + Azure Cloud)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Mumbai + Remote)",
+    "budget_inr": 6200000,
+    "amount_spent_inr": 3100000,
+    "projected_overrun_inr": 320000,
+    "pending_invoices_inr": 410000,
+    "payment_overdue_days": 35,
+    "billing_frequency": "Quarterly",
+    "start_date": "2025-04-01",
+    "planned_end_date": "2026-10-31",
+    "actual_completion_pct": 50,
+    "planned_completion_pct": 52,
+    "days_behind_schedule": 12,
+    "total_sprints": 20,
+    "completed_sprints": 10,
+    "delayed_sprints": 2,
+    "team_size": 15,
+    "onsite_count": 6,
+    "offshore_count": 9,
+    "resignations_last_30_days": 1,
+    "open_vacancies": 1,
+    "avg_experience_years": 7.2,
+    "team_utilization_pct": 90,
+    "contractor_count": 3,
+    "key_person_dependency": true,
+    "client_satisfaction_score": 7.8,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 4,
+    "nps_score": 52,
+    "change_requests_pending": 2,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "technical_complexity",
+      "regulatory_compliance",
+      "payment_delay"
+    ],
+    "compliance_flags": [
+      "RBI Cybersecurity Framework compliance",
+      "SEBI CSCRF audit Q2 2026"
+    ],
+    "vendor_dependencies": [
+      "Splunk Enterprise license renewal",
+      "CrowdStrike Falcon deployment approval"
+    ],
+    "previous_risk_scores": [
+      28,
+      32,
+      38,
+      40,
+      42
+    ],
+    "risk_trend": "SLOWLY_INCREASING"
+  },
+  {
+    "id": "PRJ-008",
+    "name": "Project Sigma",
+    "type": "Healthcare Information System",
+    "client": "Apollo Hospitals Group",
+    "client_industry": "Healthcare",
+    "client_location": "Hyderabad, Telangana",
+    "description": "Integrated Hospital Information System (HIS) covering OPD, IPD, pharmacy, lab, radiology, and billing modules across 12 hospital locations. Integration with insurance TPA systems and ABDM health stack.",
+    "technology_stack": [
+      "Java Spring Boot",
+      "React",
+      "PostgreSQL",
+      "HL7 FHIR",
+      "AWS",
+      "Kafka"
+    ],
+    "infrastructure": "AWS (ap-south-1 Mumbai)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Hyderabad + Client Site)",
+    "budget_inr": 7800000,
+    "amount_spent_inr": 3510000,
+    "projected_overrun_inr": 425000,
+    "pending_invoices_inr": 680000,
+    "payment_overdue_days": 42,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-02-01",
+    "planned_end_date": "2026-12-31",
+    "actual_completion_pct": 45,
+    "planned_completion_pct": 50,
+    "days_behind_schedule": 22,
+    "total_sprints": 28,
+    "completed_sprints": 12,
+    "delayed_sprints": 3,
+    "team_size": 20,
+    "onsite_count": 5,
+    "offshore_count": 15,
+    "resignations_last_30_days": 1,
+    "open_vacancies": 2,
+    "avg_experience_years": 5.8,
+    "team_utilization_pct": 87,
+    "contractor_count": 3,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 7.0,
+    "client_escalations_count": 1,
+    "days_since_last_client_contact": 6,
+    "nps_score": 38,
+    "change_requests_pending": 4,
+    "sla_breaches_count": 1,
+    "risk_tags": [
+      "regulatory_compliance",
+      "payment_delay",
+      "scope_creep",
+      "schedule_delay"
+    ],
+    "compliance_flags": [
+      "ABDM integration certification pending",
+      "NABH accreditation compliance",
+      "DPDP Act patient data handling"
+    ],
+    "vendor_dependencies": [
+      "HL7 FHIR certification body approval",
+      "Insurance TPA API documentation delay"
+    ],
+    "previous_risk_scores": [
+      32,
+      36,
+      40,
+      44,
+      46
+    ],
+    "risk_trend": "SLOWLY_INCREASING"
+  },
+  {
+    "id": "PRJ-009",
+    "name": "Project Nexus",
+    "type": "Supply Chain Management System",
+    "client": "Mahindra Logistics",
+    "client_industry": "Logistics & Supply Chain",
+    "client_location": "Pune, Maharashtra",
+    "description": "End-to-end supply chain visibility platform with real-time GPS tracking for 8,000+ vehicles, AI-based demand forecasting, warehouse management system (WMS), and last-mile delivery optimization engine.",
+    "technology_stack": [
+      "Python",
+      "Django",
+      "React Native",
+      "PostgreSQL",
+      "Redis",
+      "GCP",
+      "TensorFlow"
+    ],
+    "infrastructure": "GCP (Mumbai Region)",
+    "delivery_model": "Time & Material",
+    "team_location": "Offshore (Pune)",
+    "budget_inr": 4500000,
+    "amount_spent_inr": 2700000,
+    "projected_overrun_inr": 95000,
+    "pending_invoices_inr": 220000,
+    "payment_overdue_days": 18,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-07-01",
+    "planned_end_date": "2026-12-15",
+    "actual_completion_pct": 55,
+    "planned_completion_pct": 58,
+    "days_behind_schedule": 10,
+    "total_sprints": 22,
+    "completed_sprints": 12,
+    "delayed_sprints": 1,
+    "team_size": 16,
+    "onsite_count": 2,
+    "offshore_count": 14,
+    "resignations_last_30_days": 1,
+    "open_vacancies": 0,
+    "avg_experience_years": 4.9,
+    "team_utilization_pct": 84,
+    "contractor_count": 2,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 7.8,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 4,
+    "nps_score": 55,
+    "change_requests_pending": 2,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "minor_delay",
+      "resource_attrition"
+    ],
+    "compliance_flags": [
+      "GST e-way bill integration",
+      "Customs EDI compliance"
+    ],
+    "vendor_dependencies": [
+      "GPS hardware vendor — 4 week delivery lead time",
+      "GCP Maps API enterprise quota"
+    ],
+    "previous_risk_scores": [
+      25,
+      28,
+      32,
+      35,
+      36
+    ],
+    "risk_trend": "SLOWLY_INCREASING"
+  },
+  {
+    "id": "PRJ-010",
+    "name": "Project Vega",
+    "type": "DevOps & Internal Developer Platform",
+    "client": "Infosys BPM (Internal)",
+    "client_industry": "IT Services / BPO",
+    "client_location": "Bengaluru, Karnataka",
+    "description": "Internal Developer Platform (IDP) with self-service infrastructure provisioning, CI/CD pipeline standardization, observability stack, and developer portal using Backstage for 4,500+ internal developers.",
+    "technology_stack": [
+      "Backstage",
+      "ArgoCD",
+      "Kubernetes",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "AWS"
+    ],
+    "infrastructure": "AWS Multi-Account Landing Zone",
+    "delivery_model": "Time & Material",
+    "team_location": "Offshore (Bengaluru)",
+    "budget_inr": 2900000,
+    "amount_spent_inr": 1392000,
+    "projected_overrun_inr": 58000,
+    "pending_invoices_inr": 95000,
+    "payment_overdue_days": 15,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-08-01",
+    "planned_end_date": "2026-07-31",
+    "actual_completion_pct": 48,
+    "planned_completion_pct": 50,
+    "days_behind_schedule": 8,
+    "total_sprints": 18,
+    "completed_sprints": 8,
+    "delayed_sprints": 1,
+    "team_size": 10,
+    "onsite_count": 0,
+    "offshore_count": 10,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 1,
+    "avg_experience_years": 6.1,
+    "team_utilization_pct": 80,
+    "contractor_count": 2,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.0,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 3,
+    "nps_score": 60,
+    "change_requests_pending": 1,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "minor_delay",
+      "technical_complexity"
+    ],
+    "compliance_flags": [
+      "SOC 2 Type II audit readiness"
+    ],
+    "vendor_dependencies": [
+      "AWS Partner Network tier review"
+    ],
+    "previous_risk_scores": [
+      22,
+      26,
+      28,
+      30,
+      31
+    ],
+    "risk_trend": "STABLE"
+  },
+  {
+    "id": "PRJ-011",
+    "name": "Project Aurora",
+    "type": "E-commerce Platform Revamp",
+    "client": "Nykaa Fashion",
+    "client_industry": "Retail & E-commerce",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Complete frontend revamp of fashion e-commerce platform using Next.js, headless CMS architecture, AI-powered product recommendations, and performance optimization targeting sub-2s page load for 15M+ monthly users.",
+    "technology_stack": [
+      "Next.js",
+      "Contentful",
+      "GraphQL",
+      "Node.js",
+      "Elasticsearch",
+      "AWS CloudFront"
+    ],
+    "infrastructure": "AWS (CloudFront + ECS Fargate)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Offshore (Bengaluru)",
+    "budget_inr": 1800000,
+    "amount_spent_inr": 1296000,
+    "projected_overrun_inr": 22000,
+    "pending_invoices_inr": 180000,
+    "payment_overdue_days": 8,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-10-01",
+    "planned_end_date": "2026-06-30",
+    "actual_completion_pct": 72,
+    "planned_completion_pct": 72,
+    "days_behind_schedule": 0,
+    "total_sprints": 14,
+    "completed_sprints": 10,
+    "delayed_sprints": 0,
+    "team_size": 9,
+    "onsite_count": 1,
+    "offshore_count": 8,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 0,
+    "avg_experience_years": 4.5,
+    "team_utilization_pct": 76,
+    "contractor_count": 1,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.8,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 2,
+    "nps_score": 70,
+    "change_requests_pending": 1,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "on_track"
+    ],
+    "compliance_flags": [
+      "WCAG 2.1 accessibility compliance"
+    ],
+    "vendor_dependencies": [
+      "Contentful CMS license",
+      "Algolia search tier"
+    ],
+    "previous_risk_scores": [
+      18,
+      16,
+      15,
+      14,
+      14
+    ],
+    "risk_trend": "STABLE_LOW"
+  },
+  {
+    "id": "PRJ-012",
+    "name": "Project Cosmos",
+    "type": "IoT & Smart Factory Implementation",
+    "client": "Godrej Industries",
+    "client_industry": "Manufacturing",
+    "client_location": "Mumbai, Maharashtra",
+    "description": "Smart factory implementation with IoT sensors across 3 production lines, real-time OEE monitoring, predictive maintenance using ML models, and SCADA system integration for 850 connected machines.",
+    "technology_stack": [
+      "Python",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "TensorFlow Lite",
+      "AWS IoT Core",
+      "Node-RED"
+    ],
+    "infrastructure": "AWS IoT + Edge Computing (Greengrass)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Hybrid (Mumbai + Factory Site)",
+    "budget_inr": 3600000,
+    "amount_spent_inr": 1800000,
+    "projected_overrun_inr": 45000,
+    "pending_invoices_inr": 310000,
+    "payment_overdue_days": 20,
+    "billing_frequency": "Quarterly",
+    "start_date": "2025-06-15",
+    "planned_end_date": "2026-09-30",
+    "actual_completion_pct": 50,
+    "planned_completion_pct": 52,
+    "days_behind_schedule": 7,
+    "total_sprints": 18,
+    "completed_sprints": 9,
+    "delayed_sprints": 1,
+    "team_size": 12,
+    "onsite_count": 4,
+    "offshore_count": 8,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 0,
+    "avg_experience_years": 5.3,
+    "team_utilization_pct": 83,
+    "contractor_count": 2,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.2,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 5,
+    "nps_score": 62,
+    "change_requests_pending": 1,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "minor_delay",
+      "hardware_dependency"
+    ],
+    "compliance_flags": [
+      "IEC 62443 industrial cybersecurity standard",
+      "Factory Acceptance Test (FAT) pending"
+    ],
+    "vendor_dependencies": [
+      "IoT sensor hardware — 4 week lead time",
+      "SCADA vendor API documentation pending"
+    ],
+    "previous_risk_scores": [
+      20,
+      19,
+      18,
+      17,
+      17
+    ],
+    "risk_trend": "STABLE_LOW"
+  },
+  {
+    "id": "PRJ-013",
+    "name": "Project Polaris",
+    "type": "HR Tech & Gig Worker Platform",
+    "client": "Zomato Ltd",
+    "client_industry": "Food Tech / Gig Economy",
+    "client_location": "Gurugram, Haryana",
+    "description": "Next-gen HR platform for managing 350,000+ delivery partners and 8,000 corporate employees. Onboarding automation, performance management, payroll integration, and gig worker compliance module.",
+    "technology_stack": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Redis",
+      "AWS",
+      "Twilio",
+      "Razorpay"
+    ],
+    "infrastructure": "AWS (Multi-region India)",
+    "delivery_model": "Time & Material",
+    "team_location": "Offshore (Noida)",
+    "budget_inr": 4100000,
+    "amount_spent_inr": 2460000,
+    "projected_overrun_inr": 120000,
+    "pending_invoices_inr": 380000,
+    "payment_overdue_days": 25,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-04-15",
+    "planned_end_date": "2026-10-15",
+    "actual_completion_pct": 58,
+    "planned_completion_pct": 60,
+    "days_behind_schedule": 8,
+    "total_sprints": 22,
+    "completed_sprints": 13,
+    "delayed_sprints": 1,
+    "team_size": 14,
+    "onsite_count": 2,
+    "offshore_count": 12,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 1,
+    "avg_experience_years": 4.2,
+    "team_utilization_pct": 81,
+    "contractor_count": 2,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.1,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 4,
+    "nps_score": 58,
+    "change_requests_pending": 2,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "minor_delay",
+      "scope_creep"
+    ],
+    "compliance_flags": [
+      "Gig Worker Code compliance (India 2026)",
+      "PF/ESI integration audit"
+    ],
+    "vendor_dependencies": [
+      "Razorpay payroll API approval",
+      "Twilio WhatsApp Business API tier"
+    ],
+    "previous_risk_scores": [
+      24,
+      22,
+      21,
+      20,
+      20
+    ],
+    "risk_trend": "STABLE"
+  },
+  {
+    "id": "PRJ-014",
+    "name": "Project Quasar",
+    "type": "EdTech Learning Management System",
+    "client": "BYJU's (Think & Learn Pvt Ltd)",
+    "client_industry": "Education Technology",
+    "client_location": "Bengaluru, Karnataka",
+    "description": "Rebuilding core LMS with adaptive learning algorithms, live class infrastructure via WebRTC, offline sync capability for low-bandwidth users, and multilingual content support for 10M+ students across 12 languages.",
+    "technology_stack": [
+      "React Native",
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "WebRTC",
+      "AWS",
+      "Redis"
+    ],
+    "infrastructure": "AWS (Multi-AZ Mumbai + CloudFront)",
+    "delivery_model": "Fixed Price",
+    "team_location": "Offshore (Bengaluru)",
+    "budget_inr": 5200000,
+    "amount_spent_inr": 2080000,
+    "projected_overrun_inr": 180000,
+    "pending_invoices_inr": 520000,
+    "payment_overdue_days": 38,
+    "billing_frequency": "Monthly",
+    "start_date": "2025-08-01",
+    "planned_end_date": "2027-01-31",
+    "actual_completion_pct": 40,
+    "planned_completion_pct": 42,
+    "days_behind_schedule": 12,
+    "total_sprints": 30,
+    "completed_sprints": 12,
+    "delayed_sprints": 2,
+    "team_size": 18,
+    "onsite_count": 2,
+    "offshore_count": 16,
+    "resignations_last_30_days": 1,
+    "open_vacancies": 1,
+    "avg_experience_years": 4.0,
+    "team_utilization_pct": 85,
+    "contractor_count": 3,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 7.4,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 5,
+    "nps_score": 48,
+    "change_requests_pending": 3,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "payment_delay",
+      "minor_delay",
+      "client_financial_stress"
+    ],
+    "compliance_flags": [
+      "COPPA compliance for minor users",
+      "DPDP Act student data protection"
+    ],
+    "vendor_dependencies": [
+      "WebRTC CDN infrastructure scaling",
+      "AWS Reserved Instance 1-year commitment"
+    ],
+    "previous_risk_scores": [
+      28,
+      30,
+      32,
+      33,
+      34
+    ],
+    "risk_trend": "SLOWLY_INCREASING"
+  },
+  {
+    "id": "PRJ-015",
+    "name": "Project Meridian",
+    "type": "Fintech Payment Gateway",
+    "client": "PhonePe (Walmart Group)",
+    "client_industry": "Fintech / Digital Payments",
+    "client_location": "Bengaluru, Karnataka",
+    "description": "Next-gen payment gateway supporting UPI, cards, BNPL, and international payments with sub-100ms transaction processing, 99.99% uptime SLA, and PCI DSS Level 1 compliance for 500M+ registered users.",
+    "technology_stack": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "Cassandra",
+      "Redis",
+      "AWS",
+      "Terraform"
+    ],
+    "infrastructure": "AWS Multi-region Active-Active (Mumbai + Singapore)",
+    "delivery_model": "Time & Material",
+    "team_location": "Hybrid (Bengaluru + Remote)",
+    "budget_inr": 9200000,
+    "amount_spent_inr": 6900000,
+    "projected_overrun_inr": 280000,
+    "pending_invoices_inr": 850000,
+    "payment_overdue_days": 30,
+    "billing_frequency": "Monthly",
+    "start_date": "2024-12-01",
+    "planned_end_date": "2026-06-30",
+    "actual_completion_pct": 75,
+    "planned_completion_pct": 76,
+    "days_behind_schedule": 5,
+    "total_sprints": 26,
+    "completed_sprints": 19,
+    "delayed_sprints": 1,
+    "team_size": 22,
+    "onsite_count": 5,
+    "offshore_count": 17,
+    "resignations_last_30_days": 0,
+    "open_vacancies": 0,
+    "avg_experience_years": 7.5,
+    "team_utilization_pct": 88,
+    "contractor_count": 3,
+    "key_person_dependency": false,
+    "client_satisfaction_score": 8.5,
+    "client_escalations_count": 0,
+    "days_since_last_client_contact": 2,
+    "nps_score": 66,
+    "change_requests_pending": 2,
+    "sla_breaches_count": 0,
+    "risk_tags": [
+      "technical_complexity",
+      "compliance_heavy",
+      "high_stakes"
+    ],
+    "compliance_flags": [
+      "PCI DSS Level 1 QSA audit",
+      "RBI Payment Aggregator Guidelines compliance",
+      "NPCI UPI 2.0 certification"
+    ],
+    "vendor_dependencies": [
+      "NPCI infrastructure SLA dependency",
+      "Visa/Mastercard network certification timeline"
+    ],
+    "previous_risk_scores": [
+      30,
+      28,
+      26,
+      24,
+      22
+    ],
+    "risk_trend": "IMPROVING"
   }
 ]

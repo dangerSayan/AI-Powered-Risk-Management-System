@@ -173,15 +173,27 @@ class MarketAnalysisAgent:
         Returns:
             MarketSignal object
         """
+        # Map severity → relevance_score since new data uses severity not relevance_score
+        severity_to_relevance = {
+            "high":   0.90,
+            "medium": 0.65,
+            "low":    0.40,
+        }
+        severity = raw.get("severity", "medium")
+        relevance = severity_to_relevance.get(severity, 0.65)
+
         return MarketSignal(
             signal_type=raw.get("signal_type", "news"),
             source=raw.get("source", "Unknown Source"),
             headline=raw.get("headline", ""),
-            summary=raw.get("summary", ""),
+            summary=raw.get("summary", raw.get("description", "")),  # fallback to description
             sentiment=raw.get("sentiment", "neutral"),
-            relevance_score=raw.get("relevance_score", 0.5),
-            impact_on_it=raw.get("impact_on_it", "Impact unknown"),
-            published_date=datetime.now(),
+            relevance_score=raw.get("relevance_score", relevance),
+            impact_on_it=raw.get("impact_on_it", ""),
+            severity=severity,
+            affected_sectors=raw.get("affected_sectors", []),
+            description=raw.get("description", ""),
+            date=raw.get("date", ""),
         )
 
     def _score_signal(self, signal: MarketSignal) -> float:
@@ -290,9 +302,9 @@ class MarketAnalysisAgent:
         neg_ratio = negative_count / total
         pos_ratio = positive_count / total
 
-        if neg_ratio > 0.60:
+        if neg_ratio > 0.50:
             return "BEARISH"
-        elif neg_ratio > 0.40:
+        elif neg_ratio > 0.30:
             return "CAUTIOUS"
         elif pos_ratio > 0.50:
             return "BULLISH"

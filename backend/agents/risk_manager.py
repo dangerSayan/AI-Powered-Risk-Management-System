@@ -121,7 +121,54 @@ class ProjectRiskManager:
         logger.info("📂 Step 1/5 — Loading project and market data...")
 
         if projects is None:
-            projects = load_projects()
+            raw_projects = load_projects()
+        else:
+            raw_projects = projects
+
+        # Convert raw dicts → Project objects
+        # load_projects() returns plain dicts from JSON
+        # Agents need proper Pydantic Project objects
+        from datetime import date
+        from backend.models.schemas import (
+            FinancialMetrics, TeamMember, ProjectType, ProjectStatus
+        )
+
+        projects = []
+        for p in raw_projects:
+            project = Project(
+                id=p["id"],
+                name=p["name"],
+                code=p["id"],
+                client=p["client"],
+                project_type=ProjectType(p["type"]),
+                description=p["description"],
+                start_date=date.fromisoformat(p["start_date"]),
+                planned_end_date=date.fromisoformat(p["planned_end_date"]),
+                current_progress_percent=p["actual_completion_pct"],
+                schedule_delay_days=p["days_behind_schedule"],
+                team=[],
+                team_size_planned=p["team_size"],
+                resignations_last_30_days=p["resignations_last_30_days"],
+                financials={
+                    "total_budget": p["budget_inr"],
+                    "spent_to_date": p["amount_spent_inr"],
+                    "projected_total": p["amount_spent_inr"] + p["projected_overrun_inr"],
+                    "payment_delay_days": p["payment_overdue_days"],
+                    "payment_amount_pending": p["pending_invoices_inr"],
+                    "burn_rate_monthly": p["amount_spent_inr"] / 6,
+                },
+                tech_stack=p.get("technology_stack", []),
+                external_dependencies=p.get("vendor_dependencies", []),
+                status=ProjectStatus.ON_TRACK,
+                client_satisfaction_score=p["client_satisfaction_score"],
+                last_client_communication_days=p["days_since_last_client_contact"],
+                nps_score=p.get("nps_score", 0),
+                sla_breaches_count=p.get("sla_breaches_count", 0),
+                change_requests_pending=p.get("change_requests_pending", 0),
+                key_person_dependency=p.get("key_person_dependency", False),
+                contractor_count=p.get("contractor_count", 0),
+            )
+            projects.append(project)
 
         market_signals = load_market_signals()
 

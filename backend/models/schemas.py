@@ -91,13 +91,24 @@ class ProjectType(str, Enum):
     inherently more complex than others.
     e.g. Cloud Migration is riskier than a simple website.
     """
-    WEB_DEVELOPMENT = "Web Development"
-    MOBILE_APP = "Mobile App"
-    DATA_ENGINEERING = "Data Engineering"
-    CLOUD_MIGRATION = "Cloud Migration"
-    AI_ML = "AI/ML"
-    CYBERSECURITY = "Cybersecurity"
-    ERP_IMPLEMENTATION = "ERP Implementation"
+    WEB_DEVELOPMENT       = "Web Development"
+    MOBILE_APP            = "Mobile App"
+    DATA_ENGINEERING      = "Data Engineering"
+    CLOUD_MIGRATION       = "Cloud Migration & Modernization"
+    AI_ML                 = "AI/ML Platform Development"
+    CYBERSECURITY         = "Cybersecurity & SOC Implementation"
+    ERP_IMPLEMENTATION    = "Enterprise ERP Implementation"
+    DATA_WAREHOUSE        = "Data Warehouse & Analytics Platform"
+    HEALTHCARE_IS         = "Healthcare Information System"
+    SUPPLY_CHAIN          = "Supply Chain Management System"
+    DEVOPS_PLATFORM       = "DevOps & Internal Developer Platform"
+    ECOMMERCE             = "E-commerce Platform Revamp"
+    IOT_SMART_FACTORY     = "IoT & Smart Factory Implementation"
+    HR_TECH               = "HR Tech & Gig Worker Platform"
+    EDTECH_LMS            = "EdTech Learning Management System"
+    FINTECH_GATEWAY       = "Fintech Payment Gateway"
+    DIGITAL_TRANSFORMATION = "Digital Transformation Program"
+    MOBILE_BANKING        = "Mobile Banking Application"
 
 
 # ============================================================
@@ -244,6 +255,13 @@ class Project(BaseModel):
     # 0 = talked today, 14 = no contact in 2 weeks (risky!)
     last_client_communication_days: int = 0
 
+    # ── Extended Client & Risk Fields ──────────────────────────
+    nps_score: int = 0                    # Net Promoter Score
+    sla_breaches_count: int = 0           # Number of SLA breaches
+    change_requests_pending: int = 0      # Pending change requests
+    key_person_dependency: bool = False   # Single point of failure risk
+    contractor_count: int = 0             # Number of contractors
+
     # ── Metadata ──────────────────────────────────────────────
     # datetime.now is called at object creation time
     created_at: datetime = Field(default_factory=datetime.now)
@@ -359,14 +377,19 @@ class MarketSignal(BaseModel):
     relevance_score → 0 to 1 — how much does this affect IT projects
     impact_on_it   → plain English explanation of the impact
     """
-    signal_type: str
+    signal_type: str = "news"                    # default — not in new data
     source: str
     headline: str
-    summary: str
-    sentiment: str  # "positive", "negative", "neutral"
-    relevance_score: float = Field(ge=0.0, le=1.0)
-    impact_on_it: str
+    summary: str = ""                            # optional now
+    sentiment: str
+    relevance_score: float = Field(default=0.7, ge=0.0, le=1.0)  # default 0.7
+    impact_on_it: str = ""
     published_date: datetime = Field(default_factory=datetime.now)
+    # NEW fields from data_generator
+    severity: str = "medium"
+    affected_sectors: List[str] = []
+    description: str = ""
+    date: str = ""
 
 
 class MarketAnalysis(BaseModel):

@@ -13,6 +13,7 @@ Nothing else in the codebase needs to change.
 """
 
 import os
+from pathlib import Path
 from loguru import logger
 
 # python-dotenv reads your .env file and loads all
@@ -291,7 +292,11 @@ class AppConfig:
 
     # ChromaDB settings
     # This is the folder where ChromaDB saves its data on disk
-    CHROMA_PERSIST_DIR      = os.getenv("CHROMA_PERSIST_DIR", "./data/chromadb")
+    _BASE_DIR = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    CHROMA_PERSIST_DIR = os.getenv(
+        "CHROMA_PERSIST_DIR",
+        str(_BASE_DIR / "data" / "chromadb")
+    )
     CHROMA_COLLECTION_NAME  = os.getenv("CHROMA_COLLECTION_NAME", "risk_reports")
 
     # How often to auto-refresh risk analysis (Phase 4 feature)
