@@ -378,8 +378,8 @@ Nothing else in the codebase changes. This is configured in `config/llm_config.p
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/riskpulse-ai.git
-cd riskpulse-ai/risk_management
+git clone https://github.com/dangerSayan/AI-Powered-Risk-Management-System.git
+cd AI-Powered-Risk-Management-System/risk_management
 
 # 2. Create and activate virtual environment
 python -m venv .venv
@@ -424,8 +424,8 @@ streamlit run app.py
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/riskpulse-ai.git
-cd riskpulse-ai
+git clone https://github.com/dangerSayan/AI-Powered-Risk-Management-System.git
+cd AI-Powered-Risk-Management-System/risk_management
 ```
 
 ### Step 2 — Create Virtual Environment
@@ -1365,8 +1365,8 @@ Contributions are welcome! Here's how to get started:
 ### Setup for Development
 
 ```bash
-git clone https://github.com/yourusername/riskpulse-ai.git
-cd riskpulse-ai/risk_management
+git clone https://github.com/dangerSayan/AI-Powered-Risk-Management-System.git
+cd AI-Powered-Risk-Management-System/risk_management
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
@@ -1443,6 +1443,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 _RiskPulse AI — Turning project data into actionable intelligence_
 
-[![GitHub](https://img.shields.io/badge/GitHub-View%20Source-181717?style=for-the-badge&logo=github)](https://github.com/yourusername/riskpulse-ai)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20Source-181717?style=for-the-badge&logo=github)](https://github.com/dangerSayan/AI-Powered-Risk-Management-System)
 
 </div>
