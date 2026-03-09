@@ -6,11 +6,7 @@
     "description": "NASSCOM revised its annual IT sector growth forecast downward citing global macroeconomic headwinds, reduced discretionary tech spending by BFSI clients, and pricing pressure from nearshore competition. Export revenues expected at $208B vs earlier estimate of $215B. Mid-tier IT companies most impacted.",
     "sentiment": "negative",
     "impact_on_it": "Reduced new deal wins, margin pressure, potential workforce rightsizing",
-    "affected_sectors": [
-      "BFSI",
-      "Retail",
-      "Manufacturing"
-    ],
+    "affected_sectors": ["BFSI", "Retail", "Manufacturing"],
     "severity": "high",
     "date": "2026-01-15"
   },
@@ -21,10 +17,7 @@
     "description": "RBI reduced repo rate for first time in 4 years, signaling easing cycle begins. Banking sector IT budgets may see modest increase in H2 2026 as loan demand picks up. Digital transformation projects remain under budget scrutiny in H1 2026.",
     "sentiment": "neutral",
     "impact_on_it": "Moderate positive for BFSI IT spending, cautious outlook for H1 2026",
-    "affected_sectors": [
-      "BFSI",
-      "Fintech"
-    ],
+    "affected_sectors": ["BFSI", "Fintech"],
     "severity": "medium",
     "date": "2026-02-08"
   },
@@ -35,9 +28,7 @@
     "description": "Gartner projects worldwide IT spending of $5.26 trillion in 2026, with GenAI, cloud, and cybersecurity as top investment areas. Indian IT services companies well-positioned to capture AI implementation work but face delivery skill gap challenges.",
     "sentiment": "positive",
     "impact_on_it": "Strong demand for AI/ML, cloud migration, and cybersecurity services",
-    "affected_sectors": [
-      "All sectors"
-    ],
+    "affected_sectors": ["All sectors"],
     "severity": "medium",
     "date": "2026-01-22"
   },
@@ -48,9 +39,7 @@
     "description": "Voluntary attrition in Indian IT sector reached 22.4% in Q4 2025, driven by AI-related role uncertainty, return-to-office mandates, and aggressive poaching by Global Capability Centers (GCCs). Mid-level engineers (3-7 years exp) most affected. Replacement cost per engineer averaging ₹8-12 lakh including training.",
     "sentiment": "negative",
     "impact_on_it": "Project delivery risk from team instability, rising replacement and retention costs",
-    "affected_sectors": [
-      "All IT services"
-    ],
+    "affected_sectors": ["All IT services"],
     "severity": "high",
     "date": "2026-01-10"
   },
@@ -61,10 +50,7 @@
     "description": "SEBI issued circular requiring all stock exchanges, depositories, and clearing corporations to implement enhanced cybersecurity controls including 24x7 SOC, annual penetration testing, and third-party vendor risk assessment. Creates ₹2,200 crore+ IT project demand in capital markets sector.",
     "sentiment": "positive",
     "impact_on_it": "Significant cybersecurity implementation project demand from BFSI clients",
-    "affected_sectors": [
-      "BFSI",
-      "Capital Markets"
-    ],
+    "affected_sectors": ["BFSI", "Capital Markets"],
     "severity": "medium",
     "date": "2026-02-01"
   },
@@ -75,11 +61,7 @@
     "description": "Indian Rupee depreciated 3.8% against USD in Q4 2025. While revenue in INR appears stronger, hedging costs increased significantly. Projects with high offshore content and USD billing see margin compression due to elevated hedging premiums. Fixed-price contracts with INR billing most severely impacted.",
     "sentiment": "negative",
     "impact_on_it": "Margin compression on fixed-price contracts, hedging cost pressure",
-    "affected_sectors": [
-      "IT Exports",
-      "BFSI",
-      "Manufacturing"
-    ],
+    "affected_sectors": ["IT Exports", "BFSI", "Manufacturing"],
     "severity": "medium",
     "date": "2026-02-14"
   },
@@ -90,11 +72,7 @@
     "description": "Union Budget 2026 allocated ₹1.2 lakh crore for Digital India initiatives including health stack expansion, agriculture digitization, and digital infrastructure in tier 2/3 cities. Creates significant opportunities for IT services companies with government delivery experience, but payment cycles remain 90-120 days.",
     "sentiment": "positive",
     "impact_on_it": "New large government IT project opportunities; complex procurement cycles",
-    "affected_sectors": [
-      "Government",
-      "Healthcare",
-      "Agriculture"
-    ],
+    "affected_sectors": ["Government", "Healthcare", "Agriculture"],
     "severity": "medium",
     "date": "2026-02-01"
   },
@@ -105,9 +83,7 @@
     "description": "MeitY notified Digital Personal Data Protection Act implementation rules with 12-month compliance deadline. All companies handling Indian citizen data must implement data localization, consent management APIs, and data principal rights. Estimated ₹3,500 crore compliance project market across industries.",
     "sentiment": "neutral",
     "impact_on_it": "Large compliance project demand wave; also adds compliance burden to ongoing projects",
-    "affected_sectors": [
-      "All sectors handling personal data"
-    ],
+    "affected_sectors": ["All sectors handling personal data"],
     "severity": "high",
     "date": "2026-01-28"
   },
@@ -118,10 +94,7 @@
     "description": "Global Capability Centers of Fortune 500 companies planning 200+ new India centers in 2026, primarily in Bengaluru, Hyderabad, and Pune. GCCs offering 35-45% salary premium over IT service providers, aggressively targeting mid-senior talent. Expected to add 180,000 GCC jobs while poaching equivalent numbers from IT services.",
     "sentiment": "negative",
     "impact_on_it": "Severe talent poaching, salary inflation, project delivery risk from attrition",
-    "affected_sectors": [
-      "IT Services",
-      "Consulting"
-    ],
+    "affected_sectors": ["IT Services", "Consulting"],
     "severity": "high",
     "date": "2026-01-18"
   },
@@ -132,9 +105,7 @@
     "description": "McKinsey report shows 67% of Indian large enterprises actively piloting GenAI use cases, up from 31% in 2024. IT services companies with strong AI practices seeing 2x win rates on new deals. AI-augmented delivery models showing 25% productivity improvement. Creates clear premium pricing opportunity for AI-capable vendors.",
     "sentiment": "positive",
     "impact_on_it": "Strong demand for AI implementation projects; premium pricing for AI-skilled teams",
-    "affected_sectors": [
-      "All sectors"
-    ],
+    "affected_sectors": ["All sectors"],
     "severity": "medium",
     "date": "2026-02-10"
   },
@@ -145,9 +116,7 @@
     "description": "FICCI survey of 850 IT MSMEs shows average payment realization time of 98 days, up from 72 days in 2024. Large enterprise and PSU clients delaying payments due to internal budget freezes. 23% of IT MSMEs report cash flow crisis actively affecting project delivery — delayed salaries, deferred hiring, reduced training.",
     "sentiment": "negative",
     "impact_on_it": "Cash flow crisis for IT vendors; delivery delays; resource retention breakdown",
-    "affected_sectors": [
-      "All IT services"
-    ],
+    "affected_sectors": ["All IT services"],
     "severity": "high",
     "date": "2026-02-05"
   },
@@ -158,12 +127,7 @@
     "description": "AWS India reports 45% YoY growth in cloud migration project value. India now AWS's fastest growing market globally. Azure and GCP also reporting 35%+ growth in India. Strong demand for cloud architecture, migration factory, FinOps, and cloud-native development services. Skill shortage in cloud architects remains critical bottleneck.",
     "sentiment": "positive",
     "impact_on_it": "Strong project pipeline for cloud migration, modernization, and FinOps services",
-    "affected_sectors": [
-      "BFSI",
-      "Manufacturing",
-      "Healthcare",
-      "Retail"
-    ],
+    "affected_sectors": ["BFSI", "Manufacturing", "Healthcare", "Retail"],
     "severity": "medium",
     "date": "2026-01-25"
   },
@@ -174,11 +138,7 @@
     "description": "Palo Alto threat intelligence shows 218% increase in ransomware targeting Indian enterprises in 2025. BFSI, healthcare, and manufacturing most targeted sectors. Average ransom demand of $2.8M and 23-day recovery time creating board-level urgency. Emergency cybersecurity project demand with 60-90 day implementation timelines.",
     "sentiment": "positive",
     "impact_on_it": "Emergency SOC, SIEM, and incident response project demand at premium rates",
-    "affected_sectors": [
-      "BFSI",
-      "Healthcare",
-      "Manufacturing"
-    ],
+    "affected_sectors": ["BFSI", "Healthcare", "Manufacturing"],
     "severity": "high",
     "date": "2026-02-12"
   },
@@ -189,10 +149,7 @@
     "description": "RedSeer reports 18% average IT budget cut at traditional brick-and-mortar retail companies as Zepto, Blinkit, and Swiggy Instamart disrupt their business model. Digital transformation projects being descoped or delayed by 6-12 months. However, D2C brands and e-commerce platforms increasing IT spending by 32%.",
     "sentiment": "negative",
     "impact_on_it": "Retail client IT budget cuts; project deferrals; renegotiation pressure on margins",
-    "affected_sectors": [
-      "Retail",
-      "FMCG"
-    ],
+    "affected_sectors": ["Retail", "FMCG"],
     "severity": "medium",
     "date": "2026-01-30"
   },
@@ -203,11 +160,7 @@
     "description": "BCG-Google report projects India's internet economy reaching $1 trillion by 2028. UPI transactions crossing 15 billion per month, ONDC gaining traction with 80,000+ sellers, and Jan Dhan digital services creating massive backend IT infrastructure demand. Creates long-term strong pipeline for platform engineering and digital infrastructure.",
     "sentiment": "positive",
     "impact_on_it": "Long-term strong demand for digital infrastructure, fintech, and platform engineering",
-    "affected_sectors": [
-      "Fintech",
-      "E-commerce",
-      "Government"
-    ],
+    "affected_sectors": ["Fintech", "E-commerce", "Government"],
     "severity": "low",
     "date": "2026-02-03"
   },
@@ -218,11 +171,7 @@
     "description": "NASSCOM estimates AI talent demand will exceed supply by 500,000 professionals by 2027. Companies paying 35-45% premium for AI/ML engineers, data scientists, and MLOps professionals. Training pipelines unable to bridge gap — average reskilling time of 8-12 months. Impacts particularly severe for mid-size IT companies competing with tech giants.",
     "sentiment": "negative",
     "impact_on_it": "AI project delivery risk from talent shortage; margin compression from salary inflation",
-    "affected_sectors": [
-      "IT Services",
-      "BFSI",
-      "Healthcare"
-    ],
+    "affected_sectors": ["IT Services", "BFSI", "Healthcare"],
     "severity": "high",
     "date": "2026-01-20"
   },
@@ -233,11 +182,7 @@
     "description": "CII report shows manufacturing sector IT spending growing 28% as companies invest in Industry 4.0, smart factory, and supply chain digitization. ERP upgrades, IoT implementations, and AI-driven quality control driving significant project pipeline. Automotive, pharma, and electronics manufacturing sectors leading the investment wave.",
     "sentiment": "positive",
     "impact_on_it": "Strong manufacturing IT project pipeline for ERP, IoT, and AI quality systems",
-    "affected_sectors": [
-      "Manufacturing",
-      "Automotive",
-      "Pharma"
-    ],
+    "affected_sectors": ["Manufacturing", "Automotive", "Pharma"],
     "severity": "medium",
     "date": "2026-01-28"
   },
@@ -248,9 +193,7 @@
     "description": "Following multiple banking outage incidents in 2025, RBI issued emergency circular mandating core banking system resilience upgrades, disaster recovery testing, and cloud readiness assessment for all 91 scheduled commercial banks by December 2026. Estimated IT project demand of ₹8,500 crore across banking sector.",
     "sentiment": "positive",
     "impact_on_it": "Urgent banking IT project demand; premium rates for core banking expertise",
-    "affected_sectors": [
-      "BFSI"
-    ],
+    "affected_sectors": ["BFSI"],
     "severity": "high",
     "date": "2026-02-15"
   },
@@ -261,11 +204,7 @@
     "description": "Indian startup funding fell 31% to $9.6B in 2025. Edtech and consumer tech facing severe funding winter with 40+ shutdowns including major players. B2B SaaS and Fintech remain resilient with 12% growth. IT services companies with edtech clients face payment risk, project cancellations, and receivables risk from distressed clients.",
     "sentiment": "negative",
     "impact_on_it": "Edtech client payment risk; project cancellations; startup client credit risk",
-    "affected_sectors": [
-      "EdTech",
-      "Consumer Tech",
-      "D2C"
-    ],
+    "affected_sectors": ["EdTech", "Consumer Tech", "D2C"],
     "severity": "medium",
     "date": "2026-01-12"
   },
@@ -276,9 +215,7 @@
     "description": "IT sector saw 45% increase in M&A activity in 2025 with 127 deals worth $8.2B. Mid-size IT companies being acquired by larger players and PE firms at 3-5x revenue. Creates delivery risk for projects mid-acquisition due to leadership uncertainty, but also creates scale opportunities for acquirers entering new service lines.",
     "sentiment": "neutral",
     "impact_on_it": "Client uncertainty during M&A; potential project holds; new strategic scale opportunities",
-    "affected_sectors": [
-      "IT Services"
-    ],
+    "affected_sectors": ["IT Services"],
     "severity": "medium",
     "date": "2026-02-06"
   }

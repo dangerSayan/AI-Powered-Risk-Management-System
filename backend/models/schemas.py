@@ -358,6 +358,9 @@ class RiskReport(BaseModel):
     generated_at: datetime = Field(default_factory=datetime.now)
     generated_by: str = "RiskPulse AI"
 
+    # NEW FIELD
+    real_data: Optional[Dict[str, Any]] = None
+
 
 # ============================================================
 # SECTION 6 — MARKET SCHEMAS

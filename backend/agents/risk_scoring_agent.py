@@ -30,6 +30,7 @@ from backend.models.schemas import (
     MitigationStrategy,
     AgentOutput,
 )
+from backend.data.realtime_data import get_enriched_project_data
 from config.llm_config import AppConfig
 
 
@@ -109,6 +110,21 @@ class RiskScoringAgent:
         start_time = time.time()
         logger.info(f"🔍 Scoring: {project.code} — {project.name}")
 
+        # ── Override with real internal data if uploaded ──────
+        real_data = get_enriched_project_data(project.code)
+        if real_data:
+            logger.info(f"📊 Using real internal data for {project.code} ({real_data['source_system']})")
+            if real_data.get("schedule_delay_days") is not None:
+                project.schedule_delay_days = real_data["schedule_delay_days"]
+            if real_data.get("customer_satisfaction") is not None:
+                project.nps_score = int(real_data["customer_satisfaction"])
+            if real_data.get("open_risks") is not None:
+                project.change_requests_pending = real_data["open_risks"]
+            if real_data.get("open_bugs") is not None:
+                project.sla_breaches_count = real_data["open_bugs"] // 5
+            project._real_data = real_data
+        # ─────────────────────────────────────────────────────
+
         # Step 1 — Calculate all risk factors
         risk_factors = self._calculate_all_risk_factors(project)
 
@@ -168,6 +184,10 @@ class RiskScoringAgent:
             detailed_analysis=detailed_analysis,
             key_alerts=key_alerts,
         )
+
+        # Attach real data for RAG access
+        if hasattr(project, "_real_data"):
+            report.real_data = project._real_data
 
         agent_output = AgentOutput(
             agent_name=self.agent_name,
@@ -404,6 +424,17 @@ class RiskScoringAgent:
                 f"with project progress"
             )
 
+        # Use real budget utilization if uploaded
+        real = getattr(project, '_real_data', None)
+        if real and real.get("budget_utilization_pct") is not None:
+            bpct = real["budget_utilization_pct"]
+            if bpct > 90:
+                score = min(100, score + 20)
+                evidence.append(f"Real data: budget {bpct:.0f}% utilized (+20 pts)")
+            elif bpct > 80:
+                score = min(100, score + 10)
+                evidence.append(f"Real data: budget {bpct:.0f}% utilized (+10 pts)")
+
         return min(100.0, score), evidence
 
     def _score_resource(
@@ -473,6 +504,17 @@ class RiskScoringAgent:
         if project.contractor_count >= 3:
             score += 10
             evidence.append(f"{project.contractor_count} contractors on team — knowledge retention risk (+10 pts)")
+
+        # Use real team utilization if uploaded
+        real = getattr(project, '_real_data', None)
+        if real:
+            avail  = real.get("team_available_hours") or 0
+            actual = real.get("actual_hours_this_week") or 0
+            if avail > 0:
+                util = actual / avail
+                if util < 0.6:
+                    score = min(100, score + 10)
+                    evidence.append(f"Real data: team only {util:.0%} utilized this week — morale/engagement risk (+10 pts)")
 
         return min(100.0, score), evidence
 

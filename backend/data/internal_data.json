@@ -1,0 +1,50 @@
+[
+  {
+    "project_code": "PRJ-001",
+    "source_system": "CSV: riskpulse_internal_template.csv",
+    "sprint_velocity": 35.0,
+    "open_bugs": 8,
+    "open_tickets": 22,
+    "actual_hours_this_week": 300.0,
+    "team_available_hours": 400.0,
+    "invoices_raised_this_month": 2000000.0,
+    "invoices_paid_this_month": 2000000.0,
+    "custom_kpis": {
+      "notes": "Slightly behind on sprint"
+    },
+    "uploaded_at": "2026-03-09T09:59:45.862330",
+    "notes": ""
+  },
+  {
+    "project_code": "PRJ-003",
+    "source_system": "CSV: riskpulse_internal_template.csv",
+    "sprint_velocity": 18.0,
+    "open_bugs": 31,
+    "open_tickets": 67,
+    "actual_hours_this_week": 400.0,
+    "team_available_hours": 400.0,
+    "invoices_raised_this_month": 3500000.0,
+    "invoices_paid_this_month": 0.0,
+    "custom_kpis": {
+      "notes": "Client payment overdue 45 days"
+    },
+    "uploaded_at": "2026-03-09T09:59:45.862330",
+    "notes": ""
+  },
+  {
+    "project_code": "PRJ-005",
+    "source_system": "CSV: riskpulse_internal_template.csv",
+    "sprint_velocity": 22.0,
+    "open_bugs": 45,
+    "open_tickets": 89,
+    "actual_hours_this_week": 400.0,
+    "team_available_hours": 380.0,
+    "invoices_raised_this_month": 5000000.0,
+    "invoices_paid_this_month": 1000000.0,
+    "custom_kpis": {
+      "notes": "Critical - ERP go-live at risk"
+    },
+    "uploaded_at": "2026-03-09T09:59:45.862330",
+    "notes": ""
+  }
+]

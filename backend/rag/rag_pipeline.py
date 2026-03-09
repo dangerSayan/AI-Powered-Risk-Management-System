@@ -77,7 +77,7 @@ class RiskRAGPipeline:
             logger.info("✅ Embedding model ready")
 
             logger.info("⏳ Loading LLM...")
-            self.llm = LLMConfig.get_llm(temperature=0.2, max_tokens=1024)
+            self.llm = LLMConfig.get_llm(temperature=0.2, max_tokens=512)
             if self.llm:
                 logger.info("✅ LLM ready — AI-powered chat enabled")
             else:
@@ -253,12 +253,28 @@ class RiskRAGPipeline:
                 )
             )
 
+            # Try to access enriched internal data if available
+            real = getattr(report, "real_data", None)
+
+            internal_fields = ""
+            if real:
+                internal_fields = f"""
+            INTERNAL KPI DATA:
+            Schedule Delay Days: {real.get("schedule_delay_days")}
+            Team Size: {real.get("team_size")}
+            Customer Satisfaction: {real.get("customer_satisfaction")}
+            Open Risks: {real.get("open_risks")}
+            """
+
             parts.append(f"""
-    PROJECT: {report.project_name}
-    CODE: {report.project_code}
-    RISK SCORE: {report.overall_risk_score:.0f}/100
-    RISK LEVEL: {report.risk_level.value}
-    SUMMARY: {report.executive_summary}
+            PROJECT: {report.project_name}
+            CODE: {report.project_code}
+            RISK SCORE: {report.overall_risk_score:.0f}/100
+            RISK LEVEL: {report.risk_level.value}
+
+            {internal_fields}
+
+            SUMMARY: {report.executive_summary}
 
     RISK CATEGORY SCORES:
     {cats_text}
@@ -346,6 +362,19 @@ class RiskRAGPipeline:
             key=lambda r: r.overall_risk_score,
             reverse=True
         )
+
+        # ── Direct KPI queries ─────────────────────────────
+        if "schedule_delay" in q or "delay days" in q:
+            for report in reports:
+                real = getattr(report, "real_data", None)
+                if real and report.project_code.lower() in q:
+                    return f"{report.project_code} schedule delay is {real.get('schedule_delay_days')} days."
+
+        if "team size" in q:
+            for report in reports:
+                real = getattr(report, "real_data", None)
+                if real and report.project_code.lower() in q:
+                    return f"{report.project_code} team size is {real.get('team_size')} members."
 
         # ── All projects in detail ─────────────────────────────────
         if any(p in q for p in [

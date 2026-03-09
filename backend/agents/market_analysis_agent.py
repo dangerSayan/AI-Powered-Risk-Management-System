@@ -22,6 +22,7 @@ from backend.models.schemas import (
     MarketAnalysis,
     AgentOutput
 )
+from backend.data.realtime_data import get_external_market_context
 
 
 # ============================================================
@@ -102,6 +103,43 @@ class MarketAnalysisAgent:
 
         # ── Step 3: Compute overall market risk score ──────────
         market_risk_score = self._compute_market_risk(signals, signal_scores)
+        # ── Inject real external market context ─────────────────────
+        try:
+            ctx = get_external_market_context()
+
+            # GDP impact
+            gdp = ctx.get("gdp_growth")
+            if gdp:
+                if gdp < 5:
+                    market_risk_score += 10
+                elif gdp > 7:
+                    market_risk_score -= 5
+
+            # Inflation impact
+            inflation = ctx.get("inflation")
+            if inflation and inflation > 6:
+                market_risk_score += 8
+
+            # USD/INR impact
+            usd_inr = ctx.get("usd_inr")
+            if usd_inr and usd_inr > 86:
+                market_risk_score += 6
+
+            # News sentiment impact
+            neg_pct = ctx.get("news_negative_pct")
+            if neg_pct:
+                if neg_pct > 40:
+                    market_risk_score += 10
+                elif neg_pct < 20:
+                    market_risk_score -= 5
+
+            # Clamp score again
+            market_risk_score = min(100, max(10, market_risk_score))
+
+            logger.info(f"🌍 External market context applied: {ctx}")
+
+        except Exception as e:
+            logger.warning(f"External market context unavailable: {e}")
 
         # ── Step 4: Determine overall sentiment ────────────────
         negative_count = sum(1 for s in signals if s.sentiment == "negative")
@@ -158,27 +196,26 @@ class MarketAnalysisAgent:
     # These are the internal steps of the analysis pipeline.
     # Each does one thing. Small, focused, testable.
 
-    def _parse_signal(self, raw: dict) -> MarketSignal:
+    def _parse_signal(self, raw) -> MarketSignal:
         """
-        Converts a raw dict into a MarketSignal Pydantic object.
+        Converts raw input into a MarketSignal object.
 
-        Why do this conversion?
-        After this point, every signal has guaranteed fields.
-        If the raw dict is missing 'headline', we get an error
-        here — not silently in the middle of scoring logic.
-
-        Args:
-            raw: dict from market_signals.json
-
-        Returns:
-            MarketSignal object
+        Handles BOTH:
+        - dict signals (synthetic mode)
+        - MarketSignal objects (real-time mode)
         """
-        # Map severity → relevance_score since new data uses severity not relevance_score
+
+        # If it's already a MarketSignal, just return it
+        if isinstance(raw, MarketSignal):
+            return raw
+
+        # Otherwise treat it as dict (synthetic signals)
         severity_to_relevance = {
-            "high":   0.90,
+            "high": 0.90,
             "medium": 0.65,
-            "low":    0.40,
+            "low": 0.40,
         }
+
         severity = raw.get("severity", "medium")
         relevance = severity_to_relevance.get(severity, 0.65)
 
@@ -186,7 +223,7 @@ class MarketAnalysisAgent:
             signal_type=raw.get("signal_type", "news"),
             source=raw.get("source", "Unknown Source"),
             headline=raw.get("headline", ""),
-            summary=raw.get("summary", raw.get("description", "")),  # fallback to description
+            summary=raw.get("summary", raw.get("description", "")),
             sentiment=raw.get("sentiment", "neutral"),
             relevance_score=raw.get("relevance_score", relevance),
             impact_on_it=raw.get("impact_on_it", ""),
@@ -196,6 +233,8 @@ class MarketAnalysisAgent:
             date=raw.get("date", ""),
         )
 
+    
+    
     def _score_signal(self, signal: MarketSignal) -> float:
         """
         Calculates the risk contribution of one market signal.

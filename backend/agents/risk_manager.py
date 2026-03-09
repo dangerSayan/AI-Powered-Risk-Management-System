@@ -34,6 +34,7 @@ from backend.models.schemas import (
 from backend.agents.market_analysis_agent import MarketAnalysisAgent
 from backend.agents.risk_scoring_agent import RiskScoringAgent
 from backend.agents.project_status_agent import ProjectStatusAgent
+from backend.data.realtime_data import get_enriched_project_data
 from backend.data.data_generator import load_projects, load_market_signals
 
 
@@ -120,7 +121,15 @@ class ProjectRiskManager:
         # ── Step 1: Load Data ──────────────────────────────────
         logger.info("📂 Step 1/5 — Loading project and market data...")
 
-        if projects is None:
+        from backend.data.realtime_data import load_uploaded_projects
+
+        uploaded_projects = load_uploaded_projects()
+
+        if uploaded_projects:
+            logger.info("📊 Using uploaded real projects")
+            raw_projects = uploaded_projects
+        elif projects is None:
+            logger.info("🧪 Using synthetic dataset")
             raw_projects = load_projects()
         else:
             raw_projects = projects
@@ -135,6 +144,13 @@ class ProjectRiskManager:
 
         projects = []
         for p in raw_projects:
+
+            # Try to load uploaded internal data
+            enriched = get_enriched_project_data(p.get("id") or p.get("project_code"))
+
+            if enriched:
+                logger.info(f"⚡ Using uploaded data for {p['id']}")
+                p["_real_data"] = enriched
             project = Project(
                 id=p["id"],
                 name=p["name"],
@@ -145,9 +161,17 @@ class ProjectRiskManager:
                 start_date=date.fromisoformat(p["start_date"]),
                 planned_end_date=date.fromisoformat(p["planned_end_date"]),
                 current_progress_percent=p["actual_completion_pct"],
-                schedule_delay_days=p["days_behind_schedule"],
+                schedule_delay_days=(
+                    enriched["schedule_delay_days"]
+                    if enriched and enriched.get("schedule_delay_days") is not None
+                    else p["days_behind_schedule"]
+                ),
                 team=[],
-                team_size_planned=p["team_size"],
+                team_size_planned=(
+                    enriched["team_size"]
+                    if enriched and enriched.get("team_size") is not None
+                    else p["team_size"]
+                ),
                 resignations_last_30_days=p["resignations_last_30_days"],
                 financials={
                     "total_budget": p["budget_inr"],
@@ -160,7 +184,11 @@ class ProjectRiskManager:
                 tech_stack=p.get("technology_stack", []),
                 external_dependencies=p.get("vendor_dependencies", []),
                 status=ProjectStatus.ON_TRACK,
-                client_satisfaction_score=p["client_satisfaction_score"],
+                client_satisfaction_score=(
+                    enriched["customer_satisfaction"] / 10
+                    if enriched and enriched.get("customer_satisfaction") is not None
+                    else p["client_satisfaction_score"]
+                ),
                 last_client_communication_days=p["days_since_last_client_contact"],
                 nps_score=p.get("nps_score", 0),
                 sla_breaches_count=p.get("sla_breaches_count", 0),
@@ -168,9 +196,21 @@ class ProjectRiskManager:
                 key_person_dependency=p.get("key_person_dependency", False),
                 contractor_count=p.get("contractor_count", 0),
             )
+            if enriched:
+                project._real_data = enriched
             projects.append(project)
 
-        market_signals = load_market_signals()
+        from backend.data.realtime_data import ExternalDataFetcher, build_market_signals_from_external
+
+        if uploaded_projects:
+            logger.info("🌍 Fetching REAL external market data")
+
+            external_data = ExternalDataFetcher.fetch_all()
+            market_signals = build_market_signals_from_external(external_data)
+
+        else:
+            logger.info("🧪 Using synthetic market signals")
+            market_signals = load_market_signals()
 
         logger.info(
             f"  Loaded {len(projects)} projects and "
@@ -179,6 +219,19 @@ class ProjectRiskManager:
 
         # ── Step 2: Market Analysis ────────────────────────────
         logger.info("🌐 Step 2/5 — Running Market Analysis Agent...")
+
+        # Fetch real external market data first (fills cache)
+        from backend.data.realtime_data import ExternalDataFetcher
+
+        try:
+            ExternalDataFetcher.fetch_all()
+            logger.info("🌍 Real external market data fetched")
+        except Exception as e:
+            logger.warning(f"External market data fetch failed: {e}")
+
+        market_analysis, market_output = self.market_agent.analyze(
+            market_signals
+        )
 
         market_analysis, market_output = self.market_agent.analyze(
             market_signals
