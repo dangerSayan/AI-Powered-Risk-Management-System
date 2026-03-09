@@ -1439,7 +1439,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 <div align="center">
 
-**Built with ❤️ by Sayan Bose**
+**Built by Sayan Bose**
 
 _RiskPulse AI — Turning project data into actionable intelligence_
 
